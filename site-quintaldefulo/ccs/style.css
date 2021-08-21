@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Architects Daughter', cursive;
+}
+
+.header {
+    background-color: green;
+    color: rgb(155, 196, 155);
+
+    font-size: 40px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo-header {
+    width: 140px;
+}
+
+.container {
+    display: flex;
+    
+}
+
+.nav-bar {
+    
+    width: 28%;
+    font-size: 35px;
+    padding: 20px 0 0 20px; 
+    
+}
+
+.content {
+    background-color: rgb(199, 92, 92);
+    width: 72%;
+    padding: 40px;
+    border: 3px solid white;
+    border-radius: 100px 0 0 100px;
+    
+}
+
+footer {
+    background-color: orangered;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+
+    
+}
+
+ul {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+}
+
+.foto-mara-quemsomos {
+    width: 400px;
+}
+
+.mosaico img{
+    height: 400px;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+/* Fill button styling */
+.fill {
+    font-size: 20px;
+    font-weight: 200;
+    font-family: 'Architects Daughter', cursive;
+    letter-spacing: 1px;
+    padding: 13px 50px 13px;
+    outline: 0;
+    border: 1px solid rgb(175, 185, 42);
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    width: 240px;
+    border-radius: 6px;
+    color: rgb(211, 132, 30);
+  }
+  
+  .fill::after {
+    content: "";
+    background-color: #c1dd1f;
+    width: 240px;
+    border-radius: 6px;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+  }
+  
+  .fill:hover::after {
+    top: 0px;
+    left: 0px;
+  }
+  /* End of Fill Button  */
