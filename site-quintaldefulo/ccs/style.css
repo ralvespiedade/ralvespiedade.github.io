@@ -12,7 +12,8 @@ body {
 .header {
     background-color: green;
     color: rgb(155, 196, 155);
-
+    border: 10px solid lightblue;
+    border-radius: 15px;
     font-size: 40px;
     text-align: center;
     padding: 20px 0;
@@ -28,10 +29,9 @@ body {
 }
 
 .nav-bar {
-    
-    width: 28%;
+        
     font-size: 35px;
-    padding: 20px 0 0 20px; 
+    padding: 20px 35px 0 20px; 
     
 }
 
@@ -40,7 +40,7 @@ body {
     width: 72%;
     padding: 40px;
     border: 3px solid white;
-    border-radius: 100px 0 0 100px;
+    border-radius: 100px 0 100px 0;
     
 }
 
@@ -92,7 +92,7 @@ a {
   .fill::after {
     content: "";
     background-color: #c1dd1f;
-    width: 240px;
+    width: inherit;
     border-radius: 6px;
     z-index: -1;
     position: absolute;
@@ -107,3 +107,37 @@ a {
     left: 0px;
   }
   /* End of Fill Button  */
+
+  .content p {
+      color: white;
+      font-size: 25px;;
+  }
+
+  .content h1 {
+      color: white;
+      font-size: 30px;
+  }
+  .lista-serviços li{
+    font-size: 20px;
+    padding: 5px;
+    
+  }
+
+  .lista-rede-social {
+    display: flex;
+    background-color: white;
+    width: max-content;
+    border-radius: 5px;
+    
+  }
+
+  .lista-rede-social li {
+      padding: 20px;
+  }
+
+  .lista-rede-social img{
+    width: 25px;
+    
+  }
+
+  
