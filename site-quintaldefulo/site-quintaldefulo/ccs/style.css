@@ -29,10 +29,9 @@ body {
 }
 
 .nav-bar {
-    
-    width: 28%;
+        
     font-size: 35px;
-    padding: 20px 0 0 20px; 
+    padding: 20px 35px 0 20px; 
     
 }
 
@@ -41,7 +40,7 @@ body {
     width: 72%;
     padding: 40px;
     border: 3px solid white;
-    border-radius: 100px 0 0 100px;
+    border-radius: 100px 0 100px 0;
     
 }
 
@@ -140,3 +139,5 @@ a {
     width: 25px;
     
   }
+
+  
