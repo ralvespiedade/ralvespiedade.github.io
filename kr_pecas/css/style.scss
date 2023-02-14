@@ -1,0 +1,477 @@
+:root {
+    --color-primary: rgb(255, 0, 0);
+    --color-secondary: rgb(194, 92, 8);
+    --azul-padrao: #095e6f;
+}
+
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    
+    body {
+        font-family: poppins, sans-serif;
+        .container {
+            
+            width: 1170px;
+            margin: 0 auto;
+        }
+        .home {/*section*/
+            position: relative;
+            background-size: cover;
+            background-image: url(../images/Vitrine.jpg);
+            background-attachment: fixed;
+            height: 100vh; /*viewport height; 100% da área do navegador */
+            
+            header {
+                background-color: rgba(194, 92, 8, 0.87);
+                padding: 30px 0;
+                
+                
+                .nav {
+                    margin: 10px 0;   
+                    display: flex;
+                    justify-content: center;
+                    
+                    ul {
+                        display: flex;
+                        list-style: none;
+                        
+                        li {
+                            display: flex;
+                            align-items: center;
+                            margin: 0 10px;
+                            height: 50px;
+                            width: 120px;
+                            justify-content: center;
+                            
+                            a {
+                                color: rgb(221, 229, 230);
+                                text-transform: uppercase;
+                                text-decoration: none;
+                                padding: 20px;
+                                
+                                &:hover {
+                                    border-bottom: 1px solid var(--color-secondary);
+                                    border-top: 1px solid var(--color-thirdiary)
+                                    
+                                }
+                            }
+        
+                        }
+                    }
+                }
+                .banner {
+                    text-align: center;
+                    ul {
+                        li {
+                            display: flex;
+                            justify-content: center;
+                            height: 120px;
+                            .k {
+                                font-size: 120px;
+                                font-weight: bold;
+                                color: rgb(9, 9, 111);
+                                text-shadow: 3px 3px 3px white;
+                                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                margin-right: 0;
+                                
+                            }
+                            .r {
+                                font-size: 120px;
+                                font-weight: bold;
+                                color: rgba(187, 4, 4, 0.933);
+                                text-shadow: 3px 3px 3px white;
+                                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                margin-left: 0;
+                                
+                            }
+                        }
+                    }
+                    .slogan {
+                        color: white;
+                        font-size: 32px;
+                        font-style: italic;
+                        font-weight: 700;
+                        letter-spacing: 4px;
+                        
+                    }
+                }
+                
+            }
+        }
+        
+        .about {/*Second Section (sobre)*/
+            height: 100vh;
+            background-color: var(--color-secondary);
+            display: flex;
+            align-items: center;
+            .container {
+                display: flex;
+                padding: 50px 0;
+
+                
+                .timing {
+                    
+                    background-image: url(../images/estreita_horario.jpg);
+                    
+                    background-position: center;
+                    padding: 10px;
+                    margin: 0px 5px;
+                    border-radius: 10px;
+                    
+                    .overlay {/*O retangulo laranja por cima da foto*/
+                        background-color: rgba(255, 0, 0, 0.553);
+                        text-align: center;
+                        padding: 20px 40px;
+                        color: var(--color-primary);
+                        border-radius: 10px;
+
+                        h3 {/*Horário de Funcionamento*/
+                            color:rgb(255, 255, 255);
+                            border-bottom: 1px solid var(--color-primary);
+                            font-size: 19px;
+                            text-transform: uppercase;
+                            margin: 30px 0;
+                            padding-bottom: 20px;
+                        }
+
+                        .text {/*Div que envolve o dia da semana e o span que mostra o horário*/
+                            margin: 10px 0;
+                            
+                            h4 {
+                                color: rgb(218, 201, 201);
+                                font-size: 20px;
+                                font-weight: 400;
+                                
+                            }
+                            
+                        }
+                        .text::after {/*Cria bolinha depis das divs*/
+                            content: '•';
+                            display: block;
+                            font-size: 30px;
+                            color:rgb(218, 201, 201);
+                        }
+
+                        .text:last-of-type:after {/*Cria essa barra após a última div*/
+                            content: '';
+                            margin-bottom: 3px;
+                        
+                        }
+                          
+                        .material-symbols-outlined {
+                            /**/
+                            display: block;
+                            color:rgb(218, 201, 201);
+                            margin-bottom: 3px;
+                            font-variation-settings:
+                            'FILL' 0,
+                            'wght' 600,
+                            'GRAD' 0,
+                            'opsz' 40
+                        }
+                        
+                    }
+                
+
+                }
+
+                .expirience {
+                    /*Lado direito da experiencia*/
+                    max-width: 65%;
+                    height: 688.44px;
+                    background-color: white;  
+                    color: #ff0000;
+                    border-radius: 10px;
+                    padding: 10px;
+                    margin: 0px 5px;
+                    
+                    span {/*Uma hist. única*/
+                        
+                        color: #cdcdf4;
+                        background-color:rgb(10, 10, 87);
+                        border-radius: 5px;
+                        padding: 7px;
+                    }
+                    h2 {/*15 anos de experiencia*/
+                        font-weight: 400;
+                        font-size: 35px;
+                        margin: 15px;
+                    }
+                    
+                    h2:after {/*Linha abaixo do título*/
+                        display: block;
+                        content: "";
+                        height: 2px;
+                        background-color: red;
+                        margin-top: 10px;
+                    }
+
+                    .text {/*Parágrafos*/
+                        
+                        //width: 40%;
+                        display: flex;
+                        justify-content: space-between;
+                        p {
+                            font-size: 15px;
+                            margin: 10px 0;
+                        }
+                    }
+
+                    .rightSide {/*Lado direito da experiencia*/
+                        
+                        
+                        img {/*Foto descarga selada*/
+                            border-radius: 10px;
+                            box-shadow: 3px 3px 5px rgb(198, 44, 44);
+                            //justify-content: center;
+                            height: 60%;
+                            
+                            
+                            
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+        .products {/*Section Produtos*/
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            
+            .title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 10vh;
+                h2 {
+                    font-size: 45px;
+                    font-weight: 400;
+                    color: rgba(47, 0, 255, 0.796);
+                }
+            }
+            .container {
+                background-color: #ba0e0e;
+                height: 90vh;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+                //padding: 180px 0 10px 0;
+                
+                .box {
+                    height: 30vh;
+                    width: 230px;
+                   
+                    box-shadow: 3px 2px 5px black;
+                    border-radius: 8px;
+                    margin: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba(0, 0, 255, 0.492);
+                    color: white;
+                    
+                    .material-symbols-rounded {/*icon*/
+                        color: rgb(231, 116, 116);
+                        margin-bottom: 5px;
+                        font-variation-settings:
+                            'FILL' 0,
+                            'wght' 400,
+                            'GRAD' 0,
+                            'opsz' 48   
+                    }
+                    
+                    h2 {
+                        font-size: 20px;
+                       color:rgb(103, 103, 161);
+                       margin-bottom: 20px;
+                    }
+                    img {
+                        width: 150px;
+                        border-radius: 5px;
+                        box-shadow: 2px 2px 3px black;
+                    }
+                }
+            }
+        }
+        
+        .appointment {/*Section contato*/
+            background-color:rgb(9, 9, 111);
+            color: gray;
+            background-image: url(/images/carreta.png);
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            background-size: 550px;
+
+            
+            .container {
+                height: 100vh;
+                padding-top: 150px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h2 {
+                    
+                    font-size: 45px;
+                    color: white; 
+                    padding-bottom: 50px;
+                }
+                span {
+                    margin-bottom: 70px;
+                    font-size: 22px;
+                    color:rgb(198, 44, 44);
+                }
+                
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .personal_data {
+                        display: flex;
+                        
+                        
+                        
+                        .case {/*div que envolve o label e o input */
+                            
+                            display: flex;
+                            flex-direction: column;
+                            margin: 0 10px 50px 10px;
+                            
+                            label {
+                                font-size: 16px;
+                                color: grey;
+                                display: block;
+                                margin-bottom: 5px;
+                                
+                            }
+                            input {
+                                font-size: 17px;
+                                width: 350px;
+                                border-radius: 3px;
+                                padding: 6px;
+                            }
+                        }
+                        
+                    }
+                    .case_message {
+                        
+                        label {
+                            display: block;
+                            margin-bottom: 5px;        
+
+                        }
+                        
+                        textarea {
+                            border-radius: 5px;
+                        }
+                    }
+                    .submit_buttom {
+                        width: fit-content;
+                        font-size: 15px;
+                        font-weight: 600;
+                        padding: 5px 5px;
+                        color: rgb(39, 39, 140);
+                        border: 2px solid rgb(20, 20, 105);
+                        border-radius: 6px;
+                        background-color:rgb(225, 225, 237);
+                        
+                    }
+
+                }
+            }
+        }
+
+        .location {/*Section Localização*/
+            
+            padding: 100px 0;
+            background-image: url(/images/backgroundEPI.jpg);
+            background-size: cover;
+           
+            .container {
+                .head {
+                    background-color: black;
+                    padding: 20px;
+                    width: 100%;
+                    border-radius: 5px 5px 0 0;
+                    display: flex;
+                    justify-content: space-around;
+                    .info {
+                        background-color:rgb(9, 9, 111);
+                        
+                        padding: 0 18px;
+                        border-radius: 4px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .icon {
+                            
+                            
+                            
+                            
+                            span {
+                                border-radius: 15px;
+                                background-color: white;
+                                width: 30px;
+                                height: 30px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                .material-symbols-rounded {/*icon*/
+                                    color: rgb(231, 116, 116);
+                                    font-variation-settings:
+                                        'FILL' 0,
+                                        'wght' 700,
+                                        'GRAD' 0,
+                                        'opsz' 48   
+                                }
+                                
+                            } 
+                            
+                        }
+                        .text {
+                            margin: 5px;
+                            span {
+                                display: block;
+                                color: rgb(157, 157, 157);
+                                font-size: 18px;
+                            }
+                            :last-of-type {
+                                color: white;
+                                font-size: 13px;
+                            }
+
+                        }
+
+                    }
+                }
+                
+            }
+            .map {
+                width: 100%;
+
+                iframe {
+                    width: 100%;
+                    border-radius: 0 0 5px 5px;
+                }
+            }
+        }
+
+        .footer {
+            background-color: black;
+            color: rgb(254, 251, 251);
+            font-size: 12px;
+            text-align: center; 
+            height: 100px;
+            padding: 40px;
+        }
+
+    }
+}
