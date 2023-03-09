@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+}
+
+* body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+* body .sessao {
+  width: 350px;
+  height: 100vh;
+  text-align: center;
+  background-color: #b91cce;
+}
+
+* body .sessao h1 {
+  font-size: 45px;
+  margin: 80px 0;
+}
+
+* body .sessao h2 {
+  color: #c4c4c4;
+  margin-bottom: 20px;
+}
+
+* body .sessao button {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: white;
+}
+/*# sourceMappingURL=style.css.map */
