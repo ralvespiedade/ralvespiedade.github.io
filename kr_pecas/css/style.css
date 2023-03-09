@@ -68,16 +68,16 @@
           justify-content: center;
 }
 
+* body .home header .nav ul li:hover {
+  border-bottom: 1px solid #09099a;
+  border-top: 1px solid #d40606;
+}
+
 * body .home header .nav ul li a {
   color: #dde5e6;
   text-transform: uppercase;
   text-decoration: none;
   padding: 20px;
-}
-
-* body .home header .nav ul li a:hover {
-  border-bottom: 1px solid var(--color-secondary);
-  border-top: 1px solid var(--color-thirdiary);
 }
 
 * body .home header .banner {
@@ -92,6 +92,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   height: 120px;
+  margin-bottom: 35px;
 }
 
 * body .home header .banner ul li .k {
@@ -118,6 +119,38 @@
   font-style: italic;
   font-weight: 700;
   letter-spacing: 4px;
+}
+
+* body .home header .getIntouch {
+  background-color: black;
+  height: 120px;
+  position: fixed;
+  left: 0;
+  top: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px 4px;
+  border-radius: 0px 5px 5px 0;
+}
+
+* body .home header .getIntouch a {
+  text-decoration: none;
+}
+
+* body .home header .getIntouch a i {
+  font-size: 32px;
+  color: white;
+}
+
+* body .home header .getIntouch a img {
+  margin: 4px 0;
 }
 
 * body .about {
@@ -149,7 +182,7 @@
 
 * body .about .container .timing .overlay {
   /*O retangulo laranja por cima da foto*/
-  background-color: rgba(255, 0, 0, 0.553);
+  background-color: rgba(17, 44, 194, 0.553);
   text-align: center;
   padding: 20px 40px;
   color: var(--color-primary);
@@ -175,6 +208,10 @@
   color: #dac9c9;
   font-size: 20px;
   font-weight: 400;
+}
+
+* body .about .container .timing .overlay .text span {
+  color: #eca4a4;
 }
 
 * body .about .container .timing .overlay .text::after {

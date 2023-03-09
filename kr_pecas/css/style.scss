@@ -44,22 +44,25 @@
                             height: 50px;
                             width: 120px;
                             justify-content: center;
-                            
+                            //background-color:rgb(10, 10, 87);
+                           
+                            &:hover {
+                                border-bottom: 1px solid rgb(9, 9, 154);
+                                border-top: 1px solid rgb(212, 6, 6);
+                                
+                            }
                             a {
                                 color: rgb(221, 229, 230);
                                 text-transform: uppercase;
                                 text-decoration: none;
                                 padding: 20px;
                                 
-                                &:hover {
-                                    border-bottom: 1px solid var(--color-secondary);
-                                    border-top: 1px solid var(--color-thirdiary)
-                                    
-                                }
                             }
         
                         }
+
                     }
+                    
                 }
                 .banner {
                     text-align: center;
@@ -68,6 +71,7 @@
                             display: flex;
                             justify-content: center;
                             height: 120px;
+                            margin-bottom: 35px;
                             .k {
                                 font-size: 120px;
                                 font-weight: bold;
@@ -95,9 +99,34 @@
                         font-weight: 700;
                         letter-spacing: 4px;
                         
+                        
                     }
                 }
                 
+                .getIntouch {
+                    background-color: black;
+                    height: 120px;
+                    position: fixed;
+                    left: 0;
+                    top: 45%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    padding: 10px 4px;
+                    border-radius: 0px 5px 5px 0;
+        
+        
+                    a {
+                        text-decoration: none;
+                        i {
+                            font-size: 32px;
+                            color: white;
+                        }
+                        img {
+                            margin: 4px 0;
+                        }
+                    }
+                }
             }
         }
         
@@ -121,7 +150,7 @@
                     border-radius: 10px;
                     
                     .overlay {/*O retangulo laranja por cima da foto*/
-                        background-color: rgba(255, 0, 0, 0.553);
+                        background-color: rgba(17, 44, 194, 0.553);
                         text-align: center;
                         padding: 20px 40px;
                         color: var(--color-primary);
@@ -144,6 +173,9 @@
                                 font-size: 20px;
                                 font-weight: 400;
                                 
+                            }
+                            span {
+                                color: rgb(236, 164, 164);
                             }
                             
                         }
