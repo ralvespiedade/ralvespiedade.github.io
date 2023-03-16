@@ -1,30 +1,30 @@
 :root {
-    --color-primary: rgb(255, 0, 0);
-    --color-secondary: rgb(194, 92, 8);
-    --azul-padrao: #095e6f;
-}
+    --cinza: #b3cbb9;
+    --cinza-transparente: #b3cbb99f;
+    --perola: #ddd8b8;
+    --azul-UCLA: #095e6f;
+    --azul-principal-logo: #161849;
+    --vermelho-principal-logo: #ed1c24;
+    --vermelho-principal-logo-transparente: #ed1c2396;
+}   
 
 * {
-    margin: 0px;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     
     body {
         font-family: poppins, sans-serif;
-        .container {
-            
-            width: 1170px;
-            margin: 0 auto;
-        }
+        
         .home {/*section*/
             position: relative;
             background-size: cover;
-            background-image: url(../images/Vitrine.jpg);
+            background-image: url(../images/Vitrine2.jpg);
             background-attachment: fixed;
             height: 100vh; /*viewport height; 100% da área do navegador */
             
             header {
-                background-color: rgba(194, 92, 8, 0.87);
+                background-color: var(--cinza-transparente);
                 padding: 30px 0;
                 
                 
@@ -37,26 +37,44 @@
                         display: flex;
                         list-style: none;
                         
+                        
                         li {
                             display: flex;
                             align-items: center;
-                            margin: 0 10px;
+                            margin: 0 50px;
                             height: 50px;
-                            width: 120px;
+                            width: 170px;
                             justify-content: center;
-                            //background-color:rgb(10, 10, 87);
-                           
+                            transition: all 600ms ease;
+                            background-color: var(--azul-UCLA);
+                            border-radius: 20px;
+                            border: 2px solid var(--perola);
+                            
                             &:hover {
-                                border-bottom: 1px solid rgb(9, 9, 154);
-                                border-top: 1px solid rgb(212, 6, 6);
-                                
+                                //border-bottom: 1px solid var(--azul-principal-logo);
+                                //border-top: 1px solid var(--vermelho-principal-logo);
+                                box-shadow: 1px 5px 5px 3px white;
+                                background-color: var(--cinza-transparente);
+                                border: 1px solid var(--perola);
                             }
                             a {
-                                color: rgb(221, 229, 230);
+                                color: white;
                                 text-transform: uppercase;
+                                text-align: center;
                                 text-decoration: none;
                                 padding: 20px;
+                                font-family: 'Rubik', sans-serif;
+                                font-weight: 500;
+                                font-style: italic;
+                                font-size: 14px;
                                 
+                                
+                                
+                                &:hover {
+                                    color: var(--azul-principal-logo);
+                                }
+                                
+
                             }
         
                         }
@@ -66,45 +84,31 @@
                 }
                 .banner {
                     text-align: center;
+                    height: fit-content;
                     ul {
+                        margin-top: 10px;
                         li {
                             display: flex;
                             justify-content: center;
                             height: 120px;
-                            margin-bottom: 35px;
-                            .k {
-                                font-size: 120px;
-                                font-weight: bold;
-                                color: rgb(9, 9, 111);
-                                text-shadow: 3px 3px 3px white;
-                                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                                margin-right: 0;
-                                
-                            }
-                            .r {
-                                font-size: 120px;
-                                font-weight: bold;
-                                color: rgba(187, 4, 4, 0.933);
-                                text-shadow: 3px 3px 3px white;
-                                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                                margin-left: 0;
-                                
-                            }
+                            margin-bottom: 10px;
+                            margin-top: 40px;
+                            
                         }
                     }
-                    .slogan {
-                        color: white;
+                    .slogan {//Peças para carreta
+                        color: var(--azul-principal-logo);
                         font-size: 32px;
-                        font-style: italic;
-                        font-weight: 700;
-                        letter-spacing: 4px;
+                        text-transform: uppercase;
+                        font-weight: bolder;
+                        //letter-spacing: 1px;
                         
                         
                     }
                 }
                 
-                .getIntouch {
-                    background-color: black;
+                .getIntouch {//icones: HOME, ZAP, Insta
+                    background-color: var(--cinza-transparente);
                     height: 120px;
                     position: fixed;
                     left: 0;
@@ -130,52 +134,79 @@
             }
         }
         
-        .about {/*Second Section (sobre)*/
+        .about {//Second Section (sobre)
             height: 100vh;
-            background-color: var(--color-secondary);
+            background-color: var(--perola);
             display: flex;
-            align-items: center;
+            justify-content: center;
             .container {
                 display: flex;
-                padding: 50px 0;
-
+                justify-content: center;
+                margin: 0px 50px;
+                
                 
                 .timing {
                     
                     background-image: url(../images/estreita_horario.jpg);
-                    
                     background-position: center;
-                    padding: 10px;
-                    margin: 0px 5px;
                     border-radius: 10px;
+                    padding: 10px;
+                    margin: 5px;
                     
-                    .overlay {/*O retangulo laranja por cima da foto*/
-                        background-color: rgba(17, 44, 194, 0.553);
+                    
+                    
+                    .overlay {/*O retangulo cinza por cima da foto*/
+                        background-color: var(--cinza-transparente);
                         text-align: center;
-                        padding: 20px 40px;
-                        color: var(--color-primary);
                         border-radius: 10px;
+                        height: 100%;
+                        padding: 40px;
 
-                        h3 {/*Horário de Funcionamento*/
-                            color:rgb(255, 255, 255);
-                            border-bottom: 1px solid var(--color-primary);
-                            font-size: 19px;
+                        .titulo {//Horário de Funcionamento
+                            color: var(--azul-principal-logo);
+                            border-bottom: 1px solid var(--azul-UCLA);
+                            font-size: 15px;
+                            font-weight: 600;
                             text-transform: uppercase;
-                            margin: 30px 0;
+                            margin: 0px;
                             padding-bottom: 20px;
                         }
-
+                        
                         .text {/*Div que envolve o dia da semana e o span que mostra o horário*/
-                            margin: 10px 0;
                             
-                            h4 {
-                                color: rgb(218, 201, 201);
-                                font-size: 20px;
-                                font-weight: 400;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            margin-top: 10px;
+                            
+
+                            .diaDaSemana {//Dias da semana
+                                color: var(--vermelho-principal-logo);
+                                font-size: 14px;
+                                font-weight: 600;
+                                border-radius: 5px;
+                                border: 2px solid;
+                                background-color: var(--perola);
+                                width: 200px;
+                                
                                 
                             }
-                            span {
-                                color: rgb(236, 164, 164);
+                            
+                            .material-symbols-outlined {//simbolos
+                                /**/
+                                display: block;
+                                color: var(--vermelho-principal-logo);
+                                margin-bottom: 3px;
+                                font-variation-settings:
+                                'FILL' 0,
+                                'wght' 600,
+                                'GRAD' 0,
+                                'opsz' 40
+                            }
+
+
+                            span {//horários
+                                color: var(--azul-principal-logo);
                             }
                             
                         }
@@ -183,7 +214,7 @@
                             content: '•';
                             display: block;
                             font-size: 30px;
-                            color:rgb(218, 201, 201);
+                            color:var(--azul-UCLA);
                         }
 
                         .text:last-of-type:after {/*Cria essa barra após a última div*/
@@ -192,17 +223,6 @@
                         
                         }
                           
-                        .material-symbols-outlined {
-                            /**/
-                            display: block;
-                            color:rgb(218, 201, 201);
-                            margin-bottom: 3px;
-                            font-variation-settings:
-                            'FILL' 0,
-                            'wght' 600,
-                            'GRAD' 0,
-                            'opsz' 40
-                        }
                         
                     }
                 
@@ -210,59 +230,63 @@
                 }
 
                 .expirience {
-                    /*Lado direito da experiencia*/
                     max-width: 65%;
-                    height: 688.44px;
                     background-color: white;  
-                    color: #ff0000;
+                    color: var(--azul-UCLA);
                     border-radius: 10px;
                     padding: 10px;
-                    margin: 0px 5px;
+                    margin: 5px;
                     
-                    span {/*Uma hist. única*/
+                    span {/*Quem somos*/
                         
-                        color: #cdcdf4;
-                        background-color:rgb(10, 10, 87);
+                        color: white;
+                        background-color:var(--azul-UCLA);
                         border-radius: 5px;
                         padding: 7px;
+                        display: block;
+                        width: 150px;
+                        text-align: center;
+                        
                     }
-                    h2 {/*15 anos de experiencia*/
+                    h2 {//KR peças, sua loja de peças para carretas.
                         font-weight: 400;
                         font-size: 35px;
-                        margin: 15px;
+                        margin-bottom: 15px;
                     }
                     
                     h2:after {/*Linha abaixo do título*/
                         display: block;
                         content: "";
                         height: 2px;
-                        background-color: red;
-                        margin-top: 10px;
+                        background-color: var(--vermelho-principal-logo);
+                        margin: 10px 0 0px 0;
                     }
 
-                    .text {/*Parágrafos*/
-                        
-                        //width: 40%;
+
+                    .lowParteExperience {/*div que envolve a div dos paragrafos e a IMG*/
                         display: flex;
                         justify-content: space-between;
-                        p {
-                            font-size: 15px;
-                            margin: 10px 0;
+                        align-items: center;
+                        
+                        div {
+                            flex-direction: column;
+                            display: flex;
+                            align-items: center;
+
+                            
+                            
+                            p {
+                                font-size: 14px;
+                                margin: 5px 0 10px 0;
+                            }
                         }
                     }
 
                     .rightSide {/*Lado direito da experiencia*/
                         
+                        margin: 0;
+                        padding: 0;
                         
-                        img {/*Foto descarga selada*/
-                            border-radius: 10px;
-                            box-shadow: 3px 3px 5px rgb(198, 44, 44);
-                            //justify-content: center;
-                            height: 60%;
-                            
-                            
-                            
-                        }
                     }
 
                 }
@@ -274,26 +298,28 @@
             display: flex;
             justify-content: center;
             flex-direction: column;
-            
+            background-color: var(--cinza);
             .title {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 height: 10vh;
+                
                 h2 {
                     font-size: 45px;
                     font-weight: 400;
-                    color: rgba(47, 0, 255, 0.796);
+                    color: var(--azul-principal-logo);
                 }
             }
             .container {
-                background-color: #ba0e0e;
+                background-color: var(--azul-UCLA);
                 height: 90vh;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
                 align-items: center;
-                //padding: 180px 0 10px 0;
+                border-radius: 10px;
+                margin: 0 50px;
                 
                 .box {
                     height: 30vh;
@@ -306,11 +332,11 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    background-color: rgba(0, 0, 255, 0.492);
+                    background-color: var(--perola);
                     color: white;
                     
                     .material-symbols-rounded {/*icon*/
-                        color: rgb(231, 116, 116);
+                        color: var(--vermelho-principal-logo);
                         margin-bottom: 5px;
                         font-variation-settings:
                             'FILL' 0,
@@ -321,7 +347,7 @@
                     
                     h2 {
                         font-size: 20px;
-                       color:rgb(103, 103, 161);
+                       color: var(--azul-UCLA);
                        margin-bottom: 20px;
                     }
                     img {
@@ -423,26 +449,27 @@
 
         .location {/*Section Localização*/
             
-            padding: 100px 0;
-            background-image: url(/images/backgroundEPI.jpg);
-            background-size: cover;
+            padding: 100px 0 0 0;
+            
            
             .container {
+                margin: 0 50px;
                 .head {
-                    background-color: black;
-                    padding: 20px;
+                    background-color: var(--perola);
+                    padding: 10px;
                     width: 100%;
                     border-radius: 5px 5px 0 0;
                     display: flex;
                     justify-content: space-around;
                     .info {
-                        background-color:rgb(9, 9, 111);
+                        background-color:black;
                         
                         padding: 0 18px;
                         border-radius: 4px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        width: 250px;
                         .icon {
                             
                             
@@ -456,14 +483,7 @@
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
-                                .material-symbols-rounded {/*icon*/
-                                    color: rgb(231, 116, 116);
-                                    font-variation-settings:
-                                        'FILL' 0,
-                                        'wght' 700,
-                                        'GRAD' 0,
-                                        'opsz' 48   
-                                }
+                                
                                 
                             } 
                             
@@ -472,8 +492,8 @@
                             margin: 5px;
                             span {
                                 display: block;
-                                color: rgb(157, 157, 157);
-                                font-size: 18px;
+                                color: var(--cinza);
+                                font-size: 15px;
                             }
                             :last-of-type {
                                 color: white;

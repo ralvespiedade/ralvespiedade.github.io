@@ -1,6 +1,6 @@
 lista_menu = document.querySelector('#lista_menu')
 opcoes_menu = [
-                {nome:'SOBRE', id:'#about'},
+                {nome:'NOSSA HISTORIA', id:'#about'},
                 {nome:'PRODUTOS', id: '#products'},
                 //{nome: 'CONTATOS', id: '#appointment'},
                 {nome: 'LOCALIZAÇÃO', id: '#location'}
