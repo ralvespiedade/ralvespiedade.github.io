@@ -1,10 +1,15 @@
 lista_menu = document.querySelector('#lista_menu')
+
+
+
 opcoes_menu = [
-                {nome:'NOSSA HISTORIA', id:'#about'},
-                {nome:'PRODUTOS', id: '#products'},
-                //{nome: 'CONTATOS', id: '#appointment'},
-                {nome: 'LOCALIZAÇÃO', id: '#location'}
-            ]
+    {nome:'NOSSA HISTORIA', id:'#about'},
+    {nome:'PRODUTOS', id: '#products'},
+    //{nome: 'CONTATOS', id: '#appointment'},
+    {nome: 'LOCALIZAÇÃO', id: '#location'}
+]
+//só exibirá o menu quando a largura da tela for maior que 600px
+
 
 for (i of opcoes_menu) {
     
@@ -17,6 +22,9 @@ for (i of opcoes_menu) {
     `
     
 }
+
+
+
 
 
 
