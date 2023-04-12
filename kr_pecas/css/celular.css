@@ -84,13 +84,45 @@ body .home div.banner .menu_hamburger div {
   margin: 10px 0;
 }
 
+body .home div.banner .hamburger {
+  background-color: #21a40a;
+  border-radius: 7px 0 0 7px;
+  border: dotted 2px green;
+  color: white;
+  width: 200px;
+  position: fixed;
+  top: 80px;
+  right: -100%;
+  -webkit-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+}
+
+body .home div.banner .hamburger.opened {
+  right: 0%;
+}
+
+body .home div.banner .hamburger ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10;
+}
+
+body .home div.banner .hamburger ul li {
+  margin: 10px;
+}
+
 body .home .getIntouch {
   background-color: #efeaea;
   width: 100px;
   border-radius: 5px;
   position: fixed;
-  z-index: 3;
-  left: 255px;
+  z-index: 2;
+  left: 40%;
   top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -218,7 +250,6 @@ body .about .container .timing .overlay .text:last-of-type:after {
 
 body .about .container .expirience {
   position: relative;
-  z-index: 1;
   background-color: white;
   color: black;
   border-radius: 10px;
