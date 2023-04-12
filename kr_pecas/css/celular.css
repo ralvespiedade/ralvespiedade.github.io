@@ -23,16 +23,24 @@ body .home header .nav #lista_menu {
   display: none;
 }
 
-body .home .banner {
+body .home div.banner {
+  width: 100%;
+  height: 80px;
+  z-index: 2;
+  background-color: white;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-bottom: 1px solid #0c0c50;
+  -webkit-box-shadow: 0px 1px 2px black;
+          box-shadow: 0px 1px 2px black;
 }
 
-body .home .banner ul {
+body .home div.banner ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,31 +49,35 @@ body .home .banner ul {
           padding-inline-start: 0px;
 }
 
-body .home .banner ul li img {
+body .home div.banner ul li {
+  margin-left: 4px;
+}
+
+body .home div.banner ul li img {
   width: 100px;
 }
 
-body .home .banner ul li div {
-  margin-top: 30px;
+body .home div.banner ul li div {
+  margin-top: 33.4px;
 }
 
-body .home .banner ul li div .slogan {
+body .home div.banner ul li div .slogan {
   color: #161849;
   font-size: 20px;
   text-transform: uppercase;
   font-weight: bolder;
 }
 
-body .home .banner ul li .carreta {
+body .home div.banner ul li .carreta {
   display: none;
 }
 
-body .home .banner .menu_hamburger {
+body .home div.banner .menu_hamburger {
   margin-top: 15px;
-  margin-left: 10px;
+  margin-right: 5px;
 }
 
-body .home .banner .menu_hamburger div {
+body .home div.banner .menu_hamburger div {
   background-color: red;
   width: 40px;
   height: 5px;
@@ -73,26 +85,30 @@ body .home .banner .menu_hamburger div {
 }
 
 body .home .getIntouch {
-  background-color: var(--cinza-transparente);
-  height: 120px;
+  background-color: #efeaea;
+  width: 100px;
+  border-radius: 5px;
   position: fixed;
-  left: 0;
-  top: 45%;
+  z-index: 3;
+  left: 255px;
+  top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 10px 4px;
-  border-radius: 0px 5px 5px 0;
 }
 
 body .home .getIntouch a {
   text-decoration: none;
+}
+
+body .home .getIntouch a.home {
+  display: none;
 }
 
 body .home .getIntouch a i {
@@ -105,7 +121,8 @@ body .home .getIntouch a img {
 }
 
 body .about {
-  height: 100vh;
+  margin-top: 80px;
+  height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,10 +142,9 @@ body .about .container {
 }
 
 body .about .container .timing {
-  background-image: url(../images/estreita_horario.jpg);
-  background-position: center;
+  display: none;
   border-radius: 10px;
-  padding: 10px;
+  padding: 60px 10px 0px 10px;
 }
 
 body .about .container .timing .overlay {
@@ -136,7 +152,6 @@ body .about .container .timing .overlay {
   background-color: rgba(128, 128, 128, 0.789);
   text-align: center;
   border-radius: 10px;
-  height: 100vh;
   padding: 40px;
 }
 
@@ -146,11 +161,10 @@ body .about .container .timing .overlay .titulo {
   font-size: 23px;
   font-weight: 600;
   text-transform: uppercase;
-  margin: 0px;
   padding-bottom: 20px;
 }
 
-body .about .container .timing .overlay .text {
+body .about .container .timing .overlay div.text {
   /*Div que envolve o dia da semana e o span que mostra o horário*/
   display: -webkit-box;
   display: -ms-flexbox;
@@ -162,10 +176,9 @@ body .about .container .timing .overlay .text {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 10px;
 }
 
-body .about .container .timing .overlay .text .diaDaSemana {
+body .about .container .timing .overlay div.text .diaDaSemana {
   color: #d23f3f;
   font-size: 25px;
   font-weight: 600;
@@ -175,15 +188,16 @@ body .about .container .timing .overlay .text .diaDaSemana {
   padding: 3px;
 }
 
-body .about .container .timing .overlay .text .material-symbols-outlined {
+body .about .container .timing .overlay div.text .material-symbols-outlined {
   /**/
   display: block;
   color: #d23f3f;
   margin-bottom: 3px;
+  font-size: 40px;
   font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 40;
 }
 
-body .about .container .timing .overlay .text span {
+body .about .container .timing .overlay div.text span {
   color: #0c0c50;
   font-size: 20px;
 }
@@ -203,19 +217,24 @@ body .about .container .timing .overlay .text:last-of-type:after {
 }
 
 body .about .container .expirience {
+  position: relative;
+  z-index: 1;
   background-color: white;
-  color: var(--azul-UCLA);
+  color: black;
   border-radius: 10px;
   padding: 10px;
-  margin: 5px;
+  margin: 0 10px;
 }
 
 body .about .container .expirience span {
   /*Quem somos*/
+  position: absolute;
+  right: 0;
+  top: -5px;
   color: white;
-  background-color: var(--azul-UCLA);
+  background-color: #04044d;
   border-radius: 5px;
-  padding: 7px;
+  padding: 4px;
   display: block;
   text-align: center;
 }
@@ -262,7 +281,7 @@ body .about .container .expirience .lowParteExperience div {
 }
 
 body .about .container .expirience .lowParteExperience div p {
-  font-size: 16px;
+  font-size: 18px;
   margin: 5px 0 10px 0;
 }
 
@@ -278,7 +297,6 @@ body .about .container .expirience .rightSide {
 
 body .products {
   /*Section Produtos*/
-  margin-top: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -289,8 +307,8 @@ body .products {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: var(--cinza);
-  height: 100vh;
+  background-color: grey;
+  height: 340vh;
 }
 
 body .products .title {
@@ -308,29 +326,30 @@ body .products .title {
 body .products .title h2 {
   font-size: 45px;
   font-weight: 400;
-  color: darkblue;
+  color: white;
 }
 
 body .products .container {
-  background-color: blue;
-  height: 200vh;
+  background-color: white;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   border-radius: 10px;
   margin: 0 10px;
-  padding: 10px;
+  padding: 0px;
 }
 
 body .products .container .box {
-  height: 25vh;
+  height: 40vh;
+  width: 100%;
   -webkit-box-shadow: 3px 2px 5px black;
           box-shadow: 3px 2px 5px black;
   border-radius: 8px;
@@ -349,8 +368,20 @@ body .products .container .box {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(--perola);
+  background-color: #050579;
   color: white;
+}
+
+body .products .container .box.eletrica img {
+  height: 150px;
+}
+
+body .products .container .box.vedacoes img,
+body .products .container .box.suspensao img,
+body .products .container .box.epi img,
+body .products .container .box.pneumatica img,
+body .products .container .box.acessorios img {
+  height: 220px;
 }
 
 body .products .container .box .material-symbols-rounded {
@@ -362,11 +393,11 @@ body .products .container .box .material-symbols-rounded {
 body .products .container .box h2 {
   font-size: 20px;
   color: var(--azul-UCLA);
-  margin-bottom: 5px;
+  margin: 5px;
 }
 
 body .products .container .box img {
-  height: 80px;
+  height: 250px;
   border-radius: 5px;
   -webkit-box-shadow: 2px 2px 3px black;
           box-shadow: 2px 2px 3px black;
@@ -380,6 +411,7 @@ body .appointment {
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 550px;
+  display: none;
 }
 
 body .appointment .container {
@@ -481,16 +513,17 @@ body .appointment .container form .submit_buttom {
 
 body .location {
   /*Section Localização*/
-  padding: 80px 0 0 0;
+  height: 80vh;
+  margin: 30px 0 0 0;
 }
 
 body .location .container {
-  margin: 0 50px;
+  margin: 0 0px;
 }
 
 body .location .container .head {
   background-color: var(--perola);
-  padding: 5px;
+  padding: 0px;
   width: 100%;
   border-radius: 5px 5px 0 0;
   display: -webkit-box;
@@ -505,8 +538,9 @@ body .location .container .head {
           justify-content: space-between;
 }
 
-body .location .container .head .info {
+body .location .container .head div.info {
   background-color: black;
+  height: 60px;
   padding: 0 5px;
   margin: 5px;
   border-radius: 4px;
@@ -516,12 +550,13 @@ body .location .container .head .info {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-body .location .container .head .info .icon span {
+body .location .container .head div.info div.icon {
+  margin-left: 22px;
+}
+
+body .location .container .head div.info div.icon span {
   border-radius: 15px;
   background-color: white;
   width: 30px;
@@ -537,17 +572,22 @@ body .location .container .head .info .icon span {
           align-items: center;
 }
 
-body .location .container .head .info .text {
+body .location .container .head div.info .text {
   margin: 5px;
 }
 
-body .location .container .head .info .text span {
+body .location .container .head div.info .text span {
+  margin-left: 20px;
   display: block;
   color: var(--cinza);
   font-size: 15px;
 }
 
-body .location .container .head .info .text :last-of-type {
+body .location .container .head div.info .text span.titulo {
+  display: none;
+}
+
+body .location .container .head div.info .text :last-of-type {
   color: white;
   font-size: 13px;
 }
@@ -562,7 +602,7 @@ body .footer {
   color: #fefbfb;
   font-size: 12px;
   text-align: center;
-  height: 100px;
-  padding: 40px;
+  height: 10vh;
+  padding: 30px;
 }
 /*# sourceMappingURL=celular.css.map */
