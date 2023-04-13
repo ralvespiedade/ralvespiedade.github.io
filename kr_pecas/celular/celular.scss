@@ -1,0 +1,560 @@
+
+
+body {
+    font-family: poppins, sans-serif;
+    background-color: white;
+
+    .home {/*section*/
+        
+        width: 100vw;
+        header {
+            
+            display: flex;
+            flex-direction: column;
+            
+            .nav {
+
+                #lista_menu {
+                    display: none;
+                }
+
+            }
+            
+        }
+        
+        div.banner {//cabeçalho fixo
+            width: 100%;
+            height: 80px;
+            z-index: 2;
+            background-color: white;
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgb(12, 12, 80);
+            box-shadow: 0px 1px 2px black;
+            
+
+
+            ul {//lista que contem as img's e o slogan
+                display: flex;
+                list-style: none;
+                padding-inline-start: 0px;
+            
+                li {//contem a logo 
+                    margin-left: 4px;
+                    img {//logo KR
+                        width: 100px;
+                        
+                    }
+                    div {
+                        
+                        margin-top: 33.4px;
+                        
+                        .slogan {//Peças para carreta
+                            color: #161849;
+                            font-size: 20px;
+                            text-transform: uppercase;
+                            font-weight: bolder;
+                            
+                            
+                        }
+                        
+                    }
+                    .carreta {
+                        display: none;
+                    }
+                    
+                }
+            }
+            .menu_hamburger {
+                margin-top: 15px;
+                margin-right: 5px;
+                
+                div {   
+                    background-color: red;
+                    width: 40px;
+                    height: 5px;
+                    margin: 10px 0;
+                }
+            }        
+
+
+            .hamburger {
+                background-color:rgb(33, 164, 10);
+                border-radius: 7px 0 0 7px;   
+                border: dotted 2px green;
+                color: white;
+                width: 200px; 
+                position: fixed; 
+                top: 80px;
+                right: -100%;
+                transition: all 1000ms ease;
+                
+                &.opened {
+                    right: 0%;
+                }
+                
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 10;
+
+                    li {
+                        margin: 10px;
+
+                    }
+                } 
+            }
+                
+                
+                
+                
+
+            
+        }
+            
+        .getIntouch {//icones: HOME, ZAP, Insta
+            background-color: rgb(239, 234, 234);//--cinza-transparente
+            width: 100px;
+            border-radius: 5px;
+            position: fixed;
+            z-index: 2;
+            left: 40%;
+            top: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            a {
+                text-decoration: none;
+                &.home {
+                    display: none;
+                }
+                i {
+                    font-size: 32px;
+                    color: white;
+                }
+                img {
+                    margin: 4px 0;
+                }
+            }
+        }
+        
+    }
+    
+    .about {//Second Section (sobre)
+
+        margin-top: 80px;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        .container {
+            display: flex;
+            flex-direction: column;
+            
+            .timing {
+                display: none;
+                //background-image: url(../images/estreita_horario.jpg);
+                //background-position: center;
+               // background-repeat: repeat-y;
+                border-radius: 10px;
+                padding: 60px 10px 0px 10px;
+                
+                
+                .overlay {/*O retangulo cinza por cima da foto*/
+                    background-color: rgba(128, 128, 128, 0.789);//cinza transparente
+                    text-align: center;
+                    border-radius: 10px;
+                    padding: 40px;
+                    
+                    .titulo {//Horário de Funcionamento
+                        color: rgb(12, 12, 80);//azul-principal-logo
+                        border-bottom: 1px solid var(--azul-UCLA);
+                        font-size: 23px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        padding-bottom: 20px;
+                        
+                    }
+
+                    div.text {/*Div que envolve o dia da semana e o span que mostra o horário*/
+                        
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        //margin-top: 10px;
+                        
+                        .diaDaSemana {//Dias da semana
+                            color: rgb(210, 63, 63); //vermelho-principal-logo
+                            font-size: 25px;
+                            font-weight: 600;
+                            border-radius: 5px;
+                            border: 2px solid;
+                            background-color: rgb(202, 190, 190); //var(--perola)
+                            padding: 3px;
+                        }
+                        
+                        .material-symbols-outlined {//span simbolos
+                            /**/
+                            display: block;
+                            color: rgb(210, 63, 63); //vermelho-principal-logo
+                            margin-bottom: 3px;
+                            font-size: 40px;
+                            font-variation-settings:
+                            'FILL' 0,
+                            'wght' 600,
+                            'GRAD' 0,
+                            'opsz' 40
+                        }
+                        span {//horários
+                            color: rgb(12, 12, 80); //azul-principal-logo
+                            font-size: 20px;
+                        }
+                    }
+                    
+
+                    .text::after {/*Cria bolinha depis das divs*/
+                        content: '•';
+                        display: block;
+                        font-size: 30px;
+                        color:rgb(62, 48, 75); //--azul-UCLA
+                    }
+                    .text:last-of-type:after {/*Cria essa barra após a última div*/
+                        content: '';
+                        margin-bottom: 3px;
+                    
+                    }
+
+                }
+                        
+            }
+
+                        
+            .expirience {
+                position: relative;
+                background-color: white;  
+                color: black;//var(--azul-UCLA)
+                border-radius: 10px;
+                padding: 10px;
+                margin: 0 10px;
+                
+                span {/*Quem somos*/
+                    position: absolute;
+                  
+                    right: 0;
+                    top: -5px;
+                    color: white;
+                    background-color: rgb(4, 4, 77);//var(--azul-UCLA)
+                    border-radius: 5px;
+                    padding: 4px;
+                    display: block;
+                    text-align: center;
+                    
+                }
+                h2 {//KR peças, sua loja de peças para carretas.
+                    font-weight: 400;
+                    font-size: 35px;
+                    margin-bottom: 15px;
+                }
+                
+                h2:after {/*Linha abaixo do título*/
+                    display: block;
+                    content: "";
+                    height: 2px;
+                    background-color: rgb(210, 63, 63); //var(--vermelho-principal-logo)
+                    margin: 10px 0 0px 0;
+                }
+
+
+                .lowParteExperience {/*div que envolve a div dos paragrafos e a IMG*/
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+                    div {
+                        flex-direction: column;
+                        display: flex;
+                        align-items: center;
+
+                        p {
+                            font-size: 18px;
+                            margin: 5px 0 10px 0;
+                        }
+                    }
+                    img {
+                        display: none;
+                    }
+                }
+                        
+                .rightSide {/*Lado direito da experiencia*/
+                    
+                    margin: 0;
+                    padding: 0;
+                    
+                }
+                        
+            }
+                    
+        }
+        
+    }
+
+    .products {/*Section Produtos*/
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: grey;//var(--cinza)
+        height: 340vh;
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            h2 {//Nossos Produtos
+                font-size: 45px;
+                font-weight: 400;
+                color: white; //var(--azul-principal-logo)
+            }
+            
+        }
+        .container {
+            background-color: white; //var(--azul-UCLA)
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            
+            align-items: center;
+            border-radius: 10px;
+            margin: 0 10px;
+            padding: 0px;
+            
+            .box {
+                height: 40vh;
+                width: 100%;
+                box-shadow: 3px 2px 5px black;
+                border-radius: 8px;
+                margin: 5px;
+                padding: 5px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(5, 5, 121);//var(--perola)
+                color: white;
+                &.eletrica img{
+                    height: 150px;
+                }
+
+                &.vedacoes img,
+                &.suspensao img,
+                &.epi img,
+                &.pneumatica img,
+                &.acessorios img {
+                    height: 220px;
+                }
+
+                .material-symbols-rounded {/*icon*/
+                    color: rgb(242, 74, 74); //var(--vermelho-principal-logo)
+                    
+                    font-variation-settings:
+                        'FILL' 0,
+                        'wght' 400,
+                        'GRAD' 0,
+                        'opsz' 48   
+                }
+                
+                h2 {
+                    font-size: 20px;
+                    color: var(--azul-UCLA);
+                    margin: 5px;
+                }
+                img {
+                    height: 250px;
+                    border-radius: 5px;
+                    box-shadow: 2px 2px 3px black;
+                }
+            }
+        }
+    }
+    
+    .appointment {/*Section contato*/
+        background-color:rgb(9, 9, 111);
+        color: gray;
+        background-image: url(/images/carreta.png);
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 550px;
+        display: none;
+
+        
+        .container {
+            height: 100vh;
+            padding-top: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2 {
+                
+                font-size: 45px;
+                color: white; 
+                padding-bottom: 50px;
+            }
+            span {
+                margin-bottom: 70px;
+                font-size: 22px;
+                color:rgb(198, 44, 44);
+            }
+            
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+
+                .personal_data {
+                    display: flex;
+                    
+                    
+                    
+                    .case {/*div que envolve o label e o input */
+                        
+                        display: flex;
+                        flex-direction: column;
+                        margin: 0 10px 50px 10px;
+                        
+                        label {
+                            font-size: 16px;
+                            color: grey;
+                            display: block;
+                            margin-bottom: 5px;
+                            
+                        }
+                        input {
+                            font-size: 17px;
+                            width: 350px;
+                            border-radius: 3px;
+                            padding: 6px;
+                        }
+                    }
+                    
+                }
+                .case_message {
+                    
+                    label {
+                        display: block;
+                        margin-bottom: 5px;        
+
+                    }
+                    
+                    textarea {
+                        border-radius: 5px;
+                    }
+                }
+                .submit_buttom {
+                    width: fit-content;
+                    font-size: 15px;
+                    font-weight: 600;
+                    padding: 5px 5px;
+                    color: rgb(39, 39, 140);
+                    border: 2px solid rgb(20, 20, 105);
+                    border-radius: 6px;
+                    background-color:rgb(225, 225, 237);
+                    
+                }
+
+            }
+        }
+    }
+
+    .location {/*Section Localização*/
+        height: 80vh;
+        margin: 30px 0 0 0;
+        
+        
+        .container {
+            margin: 0 0px;
+            .head {
+                background-color: var(--perola);
+                padding: 0px;
+                width: 100%;
+                border-radius: 5px 5px 0 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                div.info {
+                    background-color:black;
+                    height: 60px;
+                    padding: 0 5px;
+                    margin: 5px;
+                    border-radius: 4px;
+                    display: flex;
+                    align-items: center;
+                    
+                    
+                    div.icon {//div that wraps the icon
+                        margin-left: 22px;
+                        span {
+                            border-radius: 15px;
+                            background-color: white;
+                            width: 30px;
+                            height: 30px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        } 
+                    }
+                    
+                    .text {
+                        margin: 5px;
+                        span {
+                            margin-left: 20px;
+                            display: block;
+                            color: var(--cinza);
+                            font-size: 15px;
+
+                            &.titulo {
+                                display: none;
+                            }
+                        }
+                        :last-of-type {
+                            color: white;
+                            font-size: 13px;
+                        }
+
+                    }
+                        
+                }
+            }
+            
+        }
+                        
+        .map {
+
+            iframe {
+                width: 100%;
+                border-radius: 0 0 5px 5px;
+            }
+            
+        }
+        
+    }
+    
+    .footer {
+        background-color: black;
+        color: rgb(254, 251, 251);
+        font-size: 12px;
+        text-align: center; 
+        height: 10vh;
+        padding: 30px;
+        
+    }
+                            
+}
+                        
+
+
+
+
+
+
+
