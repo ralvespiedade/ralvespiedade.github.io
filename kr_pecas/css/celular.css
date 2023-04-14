@@ -58,7 +58,7 @@ body .home div.banner ul li img {
 }
 
 body .home div.banner ul li div {
-  margin-top: 33.4px;
+  width: 166px;
 }
 
 body .home div.banner ul li div .slogan {
@@ -93,8 +93,8 @@ body .home div.banner .hamburger {
   position: fixed;
   top: 80px;
   right: -100%;
-  -webkit-transition: all 1000ms ease;
-  transition: all 1000ms ease;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
 body .home div.banner .hamburger.opened {
@@ -117,13 +117,13 @@ body .home div.banner .hamburger ul li {
 }
 
 body .home .getIntouch {
-  background-color: #efeaea;
+  background-color: black;
   width: 100px;
   border-radius: 5px;
-  position: fixed;
+  position: absolute;
   z-index: 2;
-  left: 40%;
-  top: 10px;
+  bottom: -3800px;
+  left: 39vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,8 +273,8 @@ body .about .container .expirience span {
 }
 
 body .about .container .expirience h2 {
-  font-weight: 400;
-  font-size: 35px;
+  font-weight: 700;
+  font-size: 23px;
   margin-bottom: 15px;
 }
 
@@ -315,7 +315,7 @@ body .about .container .expirience .lowParteExperience div {
 
 body .about .container .expirience .lowParteExperience div p {
   font-size: 18px;
-  margin: 5px 0 10px 0;
+  margin: 5px 0 5px 0;
 }
 
 body .about .container .expirience .lowParteExperience img {
@@ -635,7 +635,7 @@ body .footer {
   color: #fefbfb;
   font-size: 12px;
   text-align: center;
-  height: 10vh;
-  padding: 30px;
+  height: 12vh;
+  padding: 14px 30px 0px 30px;
 }
 /*# sourceMappingURL=celular.css.map */
