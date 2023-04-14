@@ -72,7 +72,7 @@ body {
                 margin-right: 5px;
                 
                 div {   
-                    background-color: red;
+                    background-color: rgb(179, 11, 11);
                     width: 40px;
                     height: 5px;
                     margin: 10px 0;
@@ -81,18 +81,18 @@ body {
 
 
             .hamburger {
-                background-color:rgb(33, 164, 10);
+                background-color:red;
                 border-radius: 7px 0 0 7px;   
                 border: dotted 2px green;
                 color: white;
                 width: 200px; 
                 position: fixed; 
-                top: 80px;
+                top: 54px;
                 right: -100%;
                 transition: all 500ms ease;
                 
                 &.opened {
-                    right: 0%;
+                    right: 3%;
                 }
                 
                 ul {
@@ -120,8 +120,8 @@ body {
             border-radius: 5px;
             position: absolute;
             z-index: 2;
-            bottom: -3800px;
-            left: 39vw;
+            bottom: -3637px;
+            left: 38vw;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
@@ -146,14 +146,14 @@ body {
     .about {//Second Section (sobre)
 
         margin-top: 80px;
-        height: 70vh;
+        height: 78vh;
         display: flex;
         justify-content: center;
         .container {
             display: flex;
             flex-direction: column;
             max-height: 652px;
-            overflow: auto;
+            //overflow: auto;
             .timing {
                 display: none;
                 //background-image: url(../images/estreita_horario.jpg);
@@ -239,6 +239,7 @@ body {
                 border-radius: 10px;
                 padding: 10px;
                 margin: 0 10px;
+                height: 100px;
                 
                 span {/*Quem somos*/
                     position: absolute;
@@ -277,7 +278,7 @@ body {
                         align-items: center;
 
                         p {
-                            font-size: 18px;
+                            font-size: 15px;
                             margin: 5px 0 5px 0;
                         }
                     }
@@ -306,7 +307,7 @@ body {
         justify-content: center;
         flex-direction: column;
         background-color: grey;//var(--cinza)
-        height: 340vh;
+        //height: 340vh;
         .title {
             display: flex;
             justify-content: center;
@@ -331,7 +332,7 @@ body {
             padding: 0px;
             
             .box {
-                height: 40vh;
+                height: 90vw;
                 width: 100%;
                 box-shadow: 3px 2px 5px black;
                 border-radius: 8px;
@@ -344,7 +345,7 @@ body {
                 background-color: rgb(5, 5, 121);//var(--perola)
                 color: white;
                 &.eletrica img{
-                    height: 150px;
+                    height: 145px;
                 }
 
                 &.vedacoes img,
@@ -352,7 +353,7 @@ body {
                 &.epi img,
                 &.pneumatica img,
                 &.acessorios img {
-                    height: 220px;
+                    height: 209px;
                 }
 
                 .material-symbols-rounded {/*icon*/
@@ -469,8 +470,8 @@ body {
     }
 
     .location {/*Section Localização*/
-        height: 80vh;
-        margin: 30px 0 0 0;
+        
+        margin: 5px 0 0 0;
         
         
         .container {
@@ -542,11 +543,13 @@ body {
     }
     
     .footer {
+        height: 100px;
+
         background-color: black;
         color: rgb(254, 251, 251);
         font-size: 12px;
         text-align: center;
-        height: 12vh;
+        display: block;
         padding: 14px 30px 0px 30px;
          
     }

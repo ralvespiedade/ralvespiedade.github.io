@@ -78,27 +78,27 @@ body .home div.banner .menu_hamburger {
 }
 
 body .home div.banner .menu_hamburger div {
-  background-color: red;
+  background-color: #b30b0b;
   width: 40px;
   height: 5px;
   margin: 10px 0;
 }
 
 body .home div.banner .hamburger {
-  background-color: #21a40a;
+  background-color: red;
   border-radius: 7px 0 0 7px;
   border: dotted 2px green;
   color: white;
   width: 200px;
   position: fixed;
-  top: 80px;
+  top: 54px;
   right: -100%;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
 
 body .home div.banner .hamburger.opened {
-  right: 0%;
+  right: 3%;
 }
 
 body .home div.banner .hamburger ul {
@@ -122,8 +122,8 @@ body .home .getIntouch {
   border-radius: 5px;
   position: absolute;
   z-index: 2;
-  bottom: -3800px;
-  left: 39vw;
+  bottom: -3637px;
+  left: 38vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,7 +154,7 @@ body .home .getIntouch a img {
 
 body .about {
   margin-top: 80px;
-  height: 70vh;
+  height: 78vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,7 +172,6 @@ body .about .container {
       -ms-flex-direction: column;
           flex-direction: column;
   max-height: 652px;
-  overflow: auto;
 }
 
 body .about .container .timing {
@@ -257,6 +256,7 @@ body .about .container .expirience {
   border-radius: 10px;
   padding: 10px;
   margin: 0 10px;
+  height: 100px;
 }
 
 body .about .container .expirience span {
@@ -314,7 +314,7 @@ body .about .container .expirience .lowParteExperience div {
 }
 
 body .about .container .expirience .lowParteExperience div p {
-  font-size: 18px;
+  font-size: 15px;
   margin: 5px 0 5px 0;
 }
 
@@ -341,7 +341,6 @@ body .products {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: grey;
-  height: 340vh;
 }
 
 body .products .title {
@@ -381,7 +380,7 @@ body .products .container {
 }
 
 body .products .container .box {
-  height: 40vh;
+  height: 90vw;
   width: 100%;
   -webkit-box-shadow: 3px 2px 5px black;
           box-shadow: 3px 2px 5px black;
@@ -406,7 +405,7 @@ body .products .container .box {
 }
 
 body .products .container .box.eletrica img {
-  height: 150px;
+  height: 145px;
 }
 
 body .products .container .box.vedacoes img,
@@ -414,7 +413,7 @@ body .products .container .box.suspensao img,
 body .products .container .box.epi img,
 body .products .container .box.pneumatica img,
 body .products .container .box.acessorios img {
-  height: 220px;
+  height: 209px;
 }
 
 body .products .container .box .material-symbols-rounded {
@@ -546,8 +545,7 @@ body .appointment .container form .submit_buttom {
 
 body .location {
   /*Section Localização*/
-  height: 80vh;
-  margin: 30px 0 0 0;
+  margin: 5px 0 0 0;
 }
 
 body .location .container {
@@ -631,11 +629,12 @@ body .location .map iframe {
 }
 
 body .footer {
+  height: 100px;
   background-color: black;
   color: #fefbfb;
   font-size: 12px;
   text-align: center;
-  height: 12vh;
+  display: block;
   padding: 14px 30px 0px 30px;
 }
 /*# sourceMappingURL=celular.css.map */
