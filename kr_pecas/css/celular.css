@@ -171,6 +171,8 @@ body .about .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-height: 652px;
+  overflow: auto;
 }
 
 body .about .container .timing {

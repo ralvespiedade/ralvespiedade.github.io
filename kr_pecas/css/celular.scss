@@ -152,7 +152,8 @@ body {
         .container {
             display: flex;
             flex-direction: column;
-            
+            max-height: 652px;
+            overflow: auto;
             .timing {
                 display: none;
                 //background-image: url(../images/estreita_horario.jpg);
@@ -241,7 +242,6 @@ body {
                 
                 span {/*Quem somos*/
                     position: absolute;
-                  
                     right: 0;
                     top: -5px;
                     color: white;
@@ -250,14 +250,14 @@ body {
                     padding: 4px;
                     display: block;
                     text-align: center;
-                    
                 }
+                  
                 h2 {//KR peças, sua loja de peças para carretas.
                     font-weight: 400;
                     font-size: 35px;
                     margin-bottom: 15px;
                 }
-                
+                    
                 h2:after {/*Linha abaixo do título*/
                     display: block;
                     content: "";
@@ -265,8 +265,7 @@ body {
                     background-color: rgb(210, 63, 63); //var(--vermelho-principal-logo)
                     margin: 10px 0 0px 0;
                 }
-
-
+                
                 .lowParteExperience {/*div que envolve a div dos paragrafos e a IMG*/
                     display: flex;
                     justify-content: space-between;
@@ -286,6 +285,8 @@ body {
                         display: none;
                     }
                 }
+
+
                         
                 .rightSide {/*Lado direito da experiencia*/
                     

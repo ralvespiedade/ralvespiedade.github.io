@@ -133,7 +133,37 @@
                             }
                         }
                         
-                
+                        .menu_hamburger {//menu hamburger
+                            display: none;
+                        }        
+            
+            
+                        .hamburger {
+                            background-color:rgb(33, 164, 10);
+                            border-radius: 7px 0 0 7px;   
+                            border: dotted 2px green;
+                            color: white;
+                            width: 200px; 
+                            position: fixed; 
+                            top: 80px;
+                            right: -100%;
+                            transition: all 1000ms ease;
+                            
+                            &.opened {
+                                right: 0%;
+                            }
+                            
+                            ul {
+                                display: flex;
+                                flex-direction: column;
+                                margin: 10;
+            
+                                li {
+                                    margin: 10px;
+            
+                                }
+                            } 
+                        }
                         
                     }
                     
@@ -155,6 +185,7 @@
                             i {
                                 font-size: 32px;
                                 color: white;
+                                background-color: var(--cinza-transparente);
                             }
                             img {
                                 margin: 4px 0;
