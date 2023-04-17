@@ -124,9 +124,7 @@ body .home .getIntouch {
   z-index: 2;
   bottom: -3637px;
   left: 38vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -636,5 +634,36 @@ body .footer {
   text-align: center;
   display: block;
   padding: 14px 30px 0px 30px;
+}
+
+body .footer .getInTouchCell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .footer .getInTouchCell a {
+  text-decoration: none;
+  display: block;
+}
+
+body .footer .getInTouchCell a.home {
+  margin: 4px 0;
+  width: 37px;
+}
+
+body .footer .getInTouchCell a i {
+  margin-top: 5px;
+  font-size: 32px;
+  color: white;
+}
+
+body .footer .getInTouchCell a img {
+  margin: 4px 0;
 }
 /*# sourceMappingURL=celular.css.map */
