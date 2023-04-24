@@ -48,8 +48,6 @@ body {
                     }
                     div {
                         
-                        margin-top: 33.4px;
-                        
                         .slogan {//Peças para carreta
                             color: #161849;
                             font-size: 20px;
@@ -121,7 +119,7 @@ body {
             z-index: 2;
             left: 40%;
             top: 10px;
-            display: flex;
+            display: none;
             flex-direction: row;
             justify-content: space-around;
 
@@ -142,11 +140,46 @@ body {
         
     }
     
+    .carrocel {
+        background-color: pink;
+        display: flex;
+        margin: 100px 0 0 0;
+        padding: 5px;
+
+        .container {
+            padding: 5px;
+            background-color: rgb(198, 11, 11);
+            box-shadow: 2px 2px 4px black;
+            overflow: hidden;
+            
+             
+            .galeria {
+                width: 100vw;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                transition: transform 500ms ease-in-out;
+                transform: translateX(0);
+
+                img {
+                    border-radius: 5px;
+                    box-shadow: 3px 3px 3px black;
+                    height: 260px;
+                    margin: 0 10px; 
+                    &.img_menor {
+                        height: 350px;
+                    }
+                                       
+                }
+            }
+        }
+    }
+
     .about {//Second Section (sobre)
 
         margin-top: 80px;
         height: 70vh;
-        display: flex;
+        display: none;
         justify-content: center;
         .container {
             display: flex;
@@ -231,6 +264,7 @@ body {
 
                         
             .expirience {
+                
                 position: relative;
                 background-color: white;  
                 color: black;//var(--azul-UCLA)
@@ -300,7 +334,7 @@ body {
     }
 
     .products {/*Section Produtos*/
-        display: flex;
+        display: none;
         justify-content: center;
         flex-direction: column;
         background-color: grey;//var(--cinza)
@@ -467,6 +501,7 @@ body {
     }
 
     .location {/*Section Localização*/
+        display: none;
         height: 80vh;
         margin: 30px 0 0 0;
         

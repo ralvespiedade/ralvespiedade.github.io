@@ -57,10 +57,6 @@ body .home div.banner ul li img {
   width: 100px;
 }
 
-body .home div.banner ul li div {
-  margin-top: 33.4px;
-}
-
 body .home div.banner ul li div .slogan {
   color: #161849;
   font-size: 20px;
@@ -124,9 +120,7 @@ body .home .getIntouch {
   z-index: 2;
   left: 40%;
   top: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -152,12 +146,57 @@ body .home .getIntouch a img {
   margin: 4px 0;
 }
 
-body .about {
-  margin-top: 80px;
-  height: 70vh;
+body .carrocel {
+  background-color: pink;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 100px 0 0 0;
+  padding: 5px;
+}
+
+body .carrocel .container {
+  padding: 5px;
+  background-color: #c60b0b;
+  -webkit-box-shadow: 2px 2px 4px black;
+          box-shadow: 2px 2px 4px black;
+  overflow: hidden;
+}
+
+body .carrocel .container .galeria {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+body .carrocel .container .galeria img {
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 3px black;
+          box-shadow: 3px 3px 3px black;
+  height: 260px;
+  margin: 0 10px;
+}
+
+body .carrocel .container .galeria img.img_menor {
+  height: 350px;
+}
+
+body .about {
+  margin-top: 80px;
+  height: 70vh;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -328,9 +367,7 @@ body .about .container .expirience .rightSide {
 
 body .products {
   /*Section Produtos*/
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -544,6 +581,7 @@ body .appointment .container form .submit_buttom {
 
 body .location {
   /*Section Localização*/
+  display: none;
   height: 80vh;
   margin: 30px 0 0 0;
 }

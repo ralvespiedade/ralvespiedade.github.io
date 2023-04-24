@@ -5,7 +5,6 @@ body {
 }
 
 body .home {
-  /*section*/
   width: 100vw;
 }
 
@@ -148,6 +147,54 @@ body .home .getIntouch a i {
 
 body .home .getIntouch a img {
   margin: 4px 0;
+}
+
+body .carrossel {
+  background-color: pink;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 100px 0 0 0;
+}
+
+body .carrossel .container {
+  background-color: #c60b0b;
+  -webkit-box-shadow: 2px 2px 4px black;
+          box-shadow: 2px 2px 4px black;
+  overflow: hidden;
+}
+
+body .carrossel .container .galeria {
+  width: 300vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  background-color: green;
+}
+
+body .carrossel .container .galeria div.wrap {
+  width: 100vw;
+  background-color: rgba(40, 40, 93, 0.852);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .carrossel .container .galeria div.wrap img {
+  border-radius: 5px;
+  height: 280px;
 }
 
 body .about {
