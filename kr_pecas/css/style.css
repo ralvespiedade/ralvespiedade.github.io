@@ -45,6 +45,7 @@
   }
   body .home div.banner ul li {
     margin-left: 4px;
+    text-align: center;
   }
   body .home div.banner ul li img {
     width: 100px;
@@ -72,10 +73,13 @@
     margin: 10px 0;
   }
   body .home div.banner .hamburger {
-    background-color: red;
-    border-radius: 7px 0 0 7px;
-    border: dotted 2px green;
+    background-image: -webkit-gradient(linear, left top, right top, from(#080877), to(red));
+    background-image: linear-gradient(to right, #080877, red);
+    border-radius: 7px 0 7px 0;
+    margin: 10px;
+    padding: 5px;
     color: white;
+    font-size: 18px;
     width: 200px;
     position: fixed;
     top: 54px;
@@ -97,9 +101,15 @@
     margin: 10;
   }
   body .home div.banner .hamburger ul li {
+    border-radius: 5px;
     margin: 10px;
+    background-color: #090e41;
+  }
+  body .home div.banner .hamburger ul li a {
+    text-decoration: none;
   }
   body .home .getIntouch {
+    display: none;
     background-color: black;
     width: 100px;
     border-radius: 5px;
@@ -107,7 +117,6 @@
     z-index: 2;
     bottom: -3637px;
     left: 38vw;
-    display: none;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;

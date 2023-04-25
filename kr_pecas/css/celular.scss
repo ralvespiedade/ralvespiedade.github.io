@@ -36,9 +36,11 @@ body {
                 display: flex;
                 list-style: none;
                 padding-inline-start: 0px;
+                
             
                 li {//contem a logo 
                     margin-left: 4px;
+                    text-align: center;
                     img {//logo KR
                         width: 100px;
                         
@@ -73,31 +75,41 @@ body {
                     height: 5px;
                     margin: 10px 0;
                 }
-            }        
+            }
+            
+            
 
 
             .hamburger {
-                background-color:red;
-                border-radius: 7px 0 0 7px;   
-                border: dotted 2px green;
+                background-image: linear-gradient(to right, rgb(8, 8, 119), red);
+                border-radius: 7px 0 7px 0; 
+                margin: 10px;
+                padding: 5px;
                 color: white;
+                font-size: 18px;
                 width: 200px; 
                 position: fixed; 
                 top: 54px;
                 right: -100%;
                 transition: all 500ms ease;
+                   
                 
                 &.opened {
                     right: 3%;
                 }
                 
+             
                 ul {
                     display: flex;
                     flex-direction: column;
                     margin: 10;
-
                     li {
+                        border-radius: 5px;
                         margin: 10px;
+                        background-color: rgb(9, 14, 65);
+                        a {
+                            text-decoration: none;
+                        }
 
                     }
                 } 
@@ -106,6 +118,7 @@ body {
         }
             
         .getIntouch {//icones: HOME, ZAP, Insta
+            display: none;
             background-color: black;//--cinza-transparente
             width: 100px;
             border-radius: 5px;
@@ -113,7 +126,6 @@ body {
             z-index: 2;
             bottom: -3637px;
             left: 38vw;
-            display: none;
             flex-direction: row;
             justify-content: space-around;
 
