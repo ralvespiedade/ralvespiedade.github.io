@@ -66,14 +66,39 @@ body {
                 }
             }
             .menu_hamburger {
-                margin-top: 15px;
-                margin-right: 5px;
-                
+                display: flex;
+                flex-direction: column; 
+                justify-content: center;
+                height: 100%;
+                transition: all 500ms ease;
                 div {   
                     background-color: rgb(179, 11, 11);
                     width: 40px;
                     height: 5px;
-                    margin: 10px 0;
+                    margin: 5px 0;
+                    transition: transform 1000ms ease;
+                    border-radius: 2px;
+
+                }
+                
+                &.clicked {
+                    transform: rotate(90deg);
+                    
+                    .top {
+                        transform: rotate(-45deg);
+                        margin: -2.7px;
+                        height: 6px;
+                    }
+    
+                    .middle {
+                        display: none;
+                    }
+    
+                    .bottom {
+                        transform: rotate(45deg);
+                        margin: -2.7px;
+                        height: 6px;
+                    }
                 }
             }
             

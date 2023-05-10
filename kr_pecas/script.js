@@ -57,13 +57,16 @@ const Main = {
     Events: {
         open_menu_click: function() {
             const menu_cell = this.$menu_cell
+            const buttom_menu = this.$button_ham
             
             if (!menu_cell.classList.contains('opened')) {
                 menu_cell.classList.add('opened')
+                buttom_menu.classList.add('clicked')
                 return
             }
-
+                
             menu_cell.classList.remove('opened')
+            buttom_menu.classList.remove('clicked')
         }, 
 
         rotation: function(imgs, galeria) {
