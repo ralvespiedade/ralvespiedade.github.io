@@ -526,7 +526,7 @@
   * body .home { /*section*/
     position: relative;
     background-size: cover;
-    background-image: url(../images/Vitrine2.jpg);
+    background-image: url(../images/loja.jpg);
     background-attachment: fixed;
     height: 100vh; /*viewport height; 100% da área do navegador */
   }
@@ -557,8 +557,6 @@
   }
   * body .home header .nav ul#lista_menu li:hover {
     box-shadow: 1px 5px 5px 3px white;
-    background-color: var(--cinza-transparente);
-    border: 1px solid var(--perola);
   }
   * body .home header .nav ul#lista_menu li a {
     color: white;
@@ -570,9 +568,10 @@
     font-weight: 500;
     font-style: italic;
     font-size: 14px;
+    transition: all 500ms ease;
   }
   * body .home header .nav ul#lista_menu li a:hover {
-    color: var(--azul-principal-logo);
+    font-size: 15px;
   }
   * body .home header .banner {
     text-align: center;
@@ -647,7 +646,6 @@
   * body .home header .getIntouch a i {
     font-size: 32px;
     color: white;
-    background-color: var(--cinza-transparente);
   }
   * body .home header .getIntouch a img {
     margin: 4px 0;

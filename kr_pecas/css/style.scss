@@ -3,8 +3,6 @@
     @import 'celular';
 }
        
-
-
 //regra para PC e Tablet
 @media (min-width: 601px) {
 
@@ -31,7 +29,7 @@
             .home {/*section*/
                 position: relative;
                 background-size: cover;
-                background-image: url(../images/Vitrine2.jpg);
+                background-image: url(../images/loja.jpg);
                 background-attachment: fixed;
                 height: 100vh; /*viewport height; 100% da área do navegador */
                 
@@ -66,8 +64,8 @@
                                     //border-bottom: 1px solid var(--azul-principal-logo);
                                     //border-top: 1px solid var(--vermelho-principal-logo);
                                     box-shadow: 1px 5px 5px 3px white;
-                                    background-color: var(--cinza-transparente);
-                                    border: 1px solid var(--perola);
+                                    //background-color: var(--cinza-transparente);
+                                    //border: 1px solid var(--perola);
                                 }
                                 a {
                                     color: white;
@@ -79,11 +77,11 @@
                                     font-weight: 500;
                                     font-style: italic;
                                     font-size: 14px;
-                                    
+                                    transition: all 500ms ease;
                                     
                                     
                                     &:hover {
-                                        color: var(--azul-principal-logo);
+                                        font-size: 15px;
                                     }
                                     
 
@@ -184,10 +182,10 @@
                         a {
                             text-decoration: none;
                             
+                            
                             i {
                                 font-size: 32px;
                                 color: white;
-                                background-color: var(--cinza-transparente);
                             }
                             img {
                                 margin: 4px 0;
