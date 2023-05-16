@@ -172,13 +172,14 @@ body {
     }
     
     .carrossel {
-        background-color: pink;
+        background-color: rgb(254, 254, 254);
         display: flex;
-        margin: 100px 0 0 0;
+        flex-direction: column;
+        margin: 120px 0 0 0;
 
         .container {
             
-            background-color: rgb(198, 11, 11);
+            background-color: rgb(255, 255, 255);
             box-shadow: 2px 2px 4px black;
             overflow: hidden;
              
@@ -199,18 +200,25 @@ body {
                         //box-shadow: 3px 3px 3px black;
                         height: 280px;
                         //margin: 0 10.5vw; 
-                        
-                                           
                     }
                 }
             }
         }
+                    
+        div.carreta {
+            img {
+                width: 100vw;
+                margin-bottom: 52px; 
+            }
+        }
     }
+
+                                           
 
     .about {//Second Section (sobre)
 
-        margin-top: 80px;
-        height: 78vh;
+        padding-top: 85px;
+        height: 100vh;
         display: flex;
         justify-content: center;
         .container {
@@ -370,7 +378,7 @@ body {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        background-color: grey;//var(--cinza)
+        background-color: white;//var(--cinza)
         //height: 340vh;
         .title {
             display: flex;
@@ -380,7 +388,7 @@ body {
             h2 {//Nossos Produtos
                 font-size: 45px;
                 font-weight: 400;
-                color: white; //var(--azul-principal-logo)
+                color: #161849; //var(--azul-principal-logo)
             }
             
         }
@@ -535,7 +543,7 @@ body {
 
     .location {/*Section Localização*/
         
-        margin: 5px 0 0 0;
+        padding: 90px 0 0 0;
         
         
         .container {
@@ -550,9 +558,9 @@ body {
                 justify-content: space-between;
                 div.info {
                     background-color:black;
-                    height: 60px;
+                    height: 40px;
                     padding: 0 5px;
-                    margin: 5px;
+                    margin: 2px;
                     border-radius: 4px;
                     display: flex;
                     align-items: center;
@@ -596,10 +604,11 @@ body {
         }
                         
         .map {
-
+            
             iframe {
+                height: 303px;
                 width: 100%;
-                border-radius: 0 0 5px 5px;
+                border-radius: 5px;
             }
             
         }
@@ -614,7 +623,7 @@ body {
         font-size: 12px;
         text-align: center;
         display: block;
-        padding: 14px 30px 0px 30px;
+        padding: 04px 30px 0px 30px;
          
         .getInTouchCell {
             display: flex;

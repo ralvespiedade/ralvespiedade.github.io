@@ -136,12 +136,13 @@
     margin: 4px 0;
   }
   body .carrossel {
-    background-color: pink;
+    background-color: rgb(254, 254, 254);
     display: flex;
-    margin: 100px 0 0 0;
+    flex-direction: column;
+    margin: 120px 0 0 0;
   }
   body .carrossel .container {
-    background-color: rgb(198, 11, 11);
+    background-color: rgb(255, 255, 255);
     box-shadow: 2px 2px 4px black;
     overflow: hidden;
   }
@@ -163,9 +164,13 @@
     border-radius: 5px;
     height: 280px;
   }
+  body .carrossel div.carreta img {
+    width: 100vw;
+    margin-bottom: 52px;
+  }
   body .about {
-    margin-top: 80px;
-    height: 78vh;
+    padding-top: 85px;
+    height: 100vh;
     display: flex;
     justify-content: center;
   }
@@ -286,7 +291,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: grey;
+    background-color: white;
   }
   body .products .title {
     display: flex;
@@ -296,7 +301,7 @@
   body .products .title h2 {
     font-size: 45px;
     font-weight: 400;
-    color: white;
+    color: #161849;
   }
   body .products .container {
     background-color: white;
@@ -413,7 +418,7 @@
     background-color: rgb(225, 225, 237);
   }
   body .location { /*Section Localização*/
-    margin: 5px 0 0 0;
+    padding: 90px 0 0 0;
   }
   body .location .container {
     margin: 0 0px;
@@ -429,9 +434,9 @@
   }
   body .location .container .head div.info {
     background-color: black;
-    height: 60px;
+    height: 40px;
     padding: 0 5px;
-    margin: 5px;
+    margin: 2px;
     border-radius: 4px;
     display: flex;
     align-items: center;
@@ -465,8 +470,9 @@
     font-size: 13px;
   }
   body .location .map iframe {
+    height: 303px;
     width: 100%;
-    border-radius: 0 0 5px 5px;
+    border-radius: 5px;
   }
   body .footer {
     height: 100px;
