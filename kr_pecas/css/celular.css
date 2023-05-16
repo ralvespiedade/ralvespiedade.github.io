@@ -433,7 +433,7 @@ body .location .container .head {
 }
 body .location .container .head div.info {
   background-color: black;
-  height: 40px;
+  height: 51px;
   padding: 0 5px;
   margin: 2px;
   border-radius: 4px;
@@ -469,7 +469,7 @@ body .location .container .head div.info .text :last-of-type {
   font-size: 13px;
 }
 body .location .map iframe {
-  height: 303px;
+  height: 406px;
   width: 100%;
   border-radius: 5px;
 }
