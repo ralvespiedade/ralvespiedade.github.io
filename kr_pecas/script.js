@@ -66,7 +66,7 @@ const Main = {
                 name: 'Elétrica',
                 class: 'box eletrica',
                 icon: 'flash_auto',
-                subfamily: ['Lanterna', 'Acessórios Elétricos']
+                subfamily: ['Lanterna', 'Acessórios']
             },
                  
             {
@@ -172,19 +172,22 @@ const Main = {
             const family = Main.$families//lista de obj.
             //metade da lista - 1
             const length = family.length / 2 - 1
+            var subclassesHTML = 'nada'
+
             for (i in family) {
-                console.log(family[i].subfamily)
+                
                 var subclasses = family[i].subfamily
-                var subclassesHTML = ""
-                
-                //do jeito que está, estamos correndo até a metade da lista.
-                //prefiro percorrer até o final e filtrar com um se.
-                
+
+                subclassesHTML = '' 
+
                 for (e of subclasses) {
-                    //se "e" <= lenght faz uma coisa, se não faz outra
-                    subclassesHTML += `<li>${e}</li>` 
+                    
+                   
+                    subclassesHTML += `<li>${e}</li>`
+                    
                     console.log(subclassesHTML)
                 }
+                                
                 
                 if (i <= length) {
                     
@@ -197,10 +200,10 @@ const Main = {
                         ">${family[i].name}</h2>   
                         <div class="expand">
                             <ul>
-                                <li>
-                                    ${subclassesHTML}
+                               
+                                ${subclassesHTML}
     
-                                </li>
+                                
     
                             </ul>
                         </div>
@@ -231,6 +234,7 @@ const Main = {
                     `
                 }
                 
+                subclassesHTML = ""
                 
             }
 
