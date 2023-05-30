@@ -38,7 +38,76 @@ const Main = {
         this.$imgs = document.querySelectorAll('.galeria img')
         this.$listaLiMenuHamburger = document.querySelectorAll('.hamburger ul li')
         this.Events.rotation(this.$imgs, this.$galeria)
-        //this.$btQuemSomos = document.querySelector('#quemsomos')
+        this.box_gallery = document.querySelector('.box')
+        this.$expand = document.querySelector('.expand')
+        this.$left_families = document.querySelector('.left_families') 
+        this.$right_families = document.querySelector('.right_families') 
+
+        this.$families = [
+            {
+                name: 'Valvulas', 
+                class: 'box valvula',
+                icon: 'valve', 
+                subfamily: ['Combustível', 'Químico', 'Alimentício']
+            },
+            {
+                name: 'Engates',
+                class: 'box',
+                icon: 'local_gas_station',
+                subfamily: ['Alumínio', 'Aço inox', 'Polipropileno', 'Ferro fundido']
+            },
+            {
+                name: 'Ponteiras',
+                class: 'box',
+                icon: 'flashlight_on',
+                subfamily: ['Alumínio', 'Aço inox', 'Polipropileno', 'Ferro fundido']
+            },
+            {
+                name: 'Elétrica',
+                class: 'box eletrica',
+                icon: 'flash_auto',
+                subfamily: ['Lanterna', 'Acessórios Elétricos']
+            },
+                 
+            {
+                name: 'Pneumática', 
+                class: 'box pneumatica',
+                icon: 'air',
+                subfamily: ['Válvulas', 'Engates', 'Conectores']
+            },
+            {
+                nome: 'Juntas e Vedações',
+                class: 'box vedacoes',
+                icon: 'nest_thermostat_gen_3',
+                subfamily: ['Combustível', 'Químico', 'Alimentício']
+            },
+            {
+                nome: 'Suspensão',
+                class: 'box sespensao',
+                icon: 'car_repair',
+                subfamily: ['Amortecedores', 'Bolsas de Ar', 'Suportes', '5ª roda']
+            },
+            {
+                nome: 'EPI',
+                class: 'box epi',
+                icon: 'wash', 
+                subfamily: ['Combustível', 'Químico', 'Alimentício']
+            },
+            {
+                nome: 'Acessórios',
+                class: 'box acessorios',
+                icon: 'fire_extinguisher',  
+                subfamily: ['Paralamas', 'Porta Extintor', 'Suporte para Placas']
+            },
+            {
+                nome: 'Placas e Adesivos', 
+                class: 'box',
+                icon: 'Warning',  
+                subfamily: ['Painel e Rótulo de segurança']
+            },
+            
+        ]
+
         //this.$btContatos = document.querySelector('#contatos')
         //this.$localizacao = document.querySelector('#localizacao')
     },
@@ -48,9 +117,11 @@ const Main = {
         this.$button_ham.onclick = this.Events.open_menu_click.bind(this)
         this.$listaLiMenuHamburger.forEach(element => { 
             element.onclick = this.Events.open_menu_click.bind(this)
-            console.log(element)
+            
         })
         //this.$btQuemSomos.onclick = this.Events.open_menu_click.bind(this)
+        
+        this.Events.products_html_construction()        
         
     },
 
@@ -73,8 +144,6 @@ const Main = {
             var qtIMGs = 0
             const screenWidth  = window.innerWidth
 
-            console.log(screenWidth)
-
             for (item of imgs) {
                 qtIMGs++
             }
@@ -93,6 +162,80 @@ const Main = {
             
             setInterval(carrossel, 3000)
         },
+
+        hover_box: function() {
+            //const box = this.box_gallery
+
+        },
+
+        products_html_construction: function () {
+            const family = Main.$families//lista de obj.
+            //metade da lista - 1
+            const length = family.length / 2 - 1
+            for (i in family) {
+                console.log(family[i].subfamily)
+                var subclasses = family[i].subfamily
+                var subclassesHTML = ""
+                
+                //do jeito que está, estamos correndo até a metade da lista.
+                //prefiro percorrer até o final e filtrar com um se.
+                
+                for (e of subclasses) {
+                    //se "e" <= lenght faz uma coisa, se não faz outra
+                    subclassesHTML += `<li>${e}</li>` 
+                    console.log(subclassesHTML)
+                }
+                
+                if (i <= length) {
+                    
+                    Main.$left_families.innerHTML += `
+                    <div class="box valvulas">
+                        <span class="material-symbols-rounded">
+                            ${family[i].icon}
+                        </span>
+                        <h2 class="title_family
+                        ">${family[i].name}</h2>   
+                        <div class="expand">
+                            <ul>
+                                <li>
+                                    ${subclassesHTML}
+    
+                                </li>
+    
+                            </ul>
+                        </div>
+                
+                    </div>
+    
+                    `
+                } else {
+                    Main.$right_families.innerHTML += `
+                    <div class="box valvulas">
+                        <span class="material-symbols-rounded">
+                            ${family[i].icon}
+                        </span>
+                        <h2 class="title_family
+                        ">${family[i].nome}</h2>   
+                        <div class="expand">
+                            <ul>
+                                <li>
+                                    ${subclassesHTML}
+    
+                                </li>
+    
+                            </ul>
+                        </div>
+                
+                    </div>
+    
+                    `
+                }
+                
+                
+            }
+
+            
+        }
 
     }
         
