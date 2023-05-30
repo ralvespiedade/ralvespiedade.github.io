@@ -103,7 +103,7 @@ const Main = {
                 nome: 'Placas e Adesivos', 
                 class: 'box',
                 icon: 'Warning',  
-                subfamily: ['Painel e Rótulo de segurança']
+                subfamily: ['Painel', 'Rótulo de segurança']
             },
             
         ]
@@ -182,13 +182,11 @@ const Main = {
 
                 for (e of subclasses) {
                     
-                   
                     subclassesHTML += `<li>${e}</li>`
                     
-                    console.log(subclassesHTML)
                 }
-                                
-                
+                    
+                 
                 if (i <= length) {
                     
                     Main.$left_families.innerHTML += `
@@ -212,6 +210,7 @@ const Main = {
     
                     `
                 } else {
+                    console.log(`Entrou nas familias da direita`)
                     Main.$right_families.innerHTML += `
                     <div class="box valvulas">
                         <span class="material-symbols-rounded">
@@ -219,12 +218,11 @@ const Main = {
                         </span>
                         <h2 class="title_family
                         ">${family[i].nome}</h2>   
-                        <div class="expand">
+                        <div class="expand _right">
                             <ul>
-                                <li>
-                                    ${subclassesHTML}
+                               
+                                ${subclassesHTML}
     
-                                </li>
     
                             </ul>
                         </div>
