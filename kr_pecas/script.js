@@ -4,7 +4,6 @@ lista_menu = document.querySelector('#lista_menu')
 opcoes_menu = [
     {nome:'NOSSA HISTORIA', id:'#about'},
     {nome:'PRODUTOS', id: '#products'},
-    //{nome: 'CONTATOS', id: '#appointment'},
     {nome: 'LOCALIZAÇÃO', id: '#location'}
 ]
 //só exibirá o menu quando a largura da tela for maior que 600px
@@ -41,23 +40,41 @@ const Main = {
         this.box_gallery = document.querySelector('.box')
         this.$expand = document.querySelector('.expand')
         this.$left_families = document.querySelector('.left_families') 
-        this.$right_families = document.querySelector('.right_families') 
+        this.$right_families = document.querySelector('.right_families')
+        this.$product_show = document.querySelector('.product_show')
 
         this.$families = [
+
             {
-                name: 'Valvulas', 
+                name: 'Válvulas', 
                 class: 'box valvula',
                 icon: 'valve', 
-                subfamily: ['Combustível', 'Químico', 'Alimentício']
+                subfamily: ['Combustível', 'Químico', 'Alimentício'],
+                válvulas_combustivel: [
+                    'valvula_combustivel1.jpeg',
+                    'valvula_combustivel2.jpeg',
+                    'valvula_combustivel3.jpeg', 
+                    'valvula_combustivel4.jpeg'
+                ],
+                válvulas_quimico: [
+                    'valvula_quimico1.jpg',
+                    'valvula_quimico2.jpg',
+                    'valvula_quimico3.jpg'
+                ],
+                válvulas_alimenticio: [
+                    'valvula_alimenticio1.jpeg',
+                    'valvula_alimenticio2.jpeg',
+                    'valvula_alimenticio3.jpeg'
+                ],
             },
             {
-                name: 'Engates',
+                name: 'Engates e Conexões',
                 class: 'box',
                 icon: 'local_gas_station',
                 subfamily: ['Alumínio', 'Aço inox', 'Polipropileno', 'Ferro fundido']
             },
             {
-                name: 'Ponteiras',
+                name: 'Ponteiras e Mangotes',
                 class: 'box',
                 icon: 'flashlight_on',
                 subfamily: ['Alumínio', 'Aço inox', 'Polipropileno', 'Ferro fundido']
@@ -108,22 +125,26 @@ const Main = {
             
         ]
 
-        //this.$btContatos = document.querySelector('#contatos')
-        //this.$localizacao = document.querySelector('#localizacao')
     },
-        
-    
+       
+      
     bindEvents: function () {
+        const subFamilyButton = this.Events.products_html_construction()   
+       
         this.$button_ham.onclick = this.Events.open_menu_click.bind(this)
+       
         this.$listaLiMenuHamburger.forEach(element => { 
             element.onclick = this.Events.open_menu_click.bind(this)
             
         })
-        //this.$btQuemSomos.onclick = this.Events.open_menu_click.bind(this)
         
-        this.Events.products_html_construction()        
+        subFamilyButton.forEach(button => {
+            button.onclick = this.Events.showImages.bind(this)
+        })
+
         
     },
+        
 
     Events: {
         open_menu_click: function() {
@@ -163,11 +184,6 @@ const Main = {
             setInterval(carrossel, 3000)
         },
 
-        hover_box: function() {
-            //const box = this.box_gallery
-
-        },
-
         products_html_construction: function () {
             const family = Main.$families//lista de obj.
             //metade da lista - 1
@@ -177,14 +193,18 @@ const Main = {
             for (i in family) {
                 
                 var subclasses = family[i].subfamily
-
-                subclassesHTML = '' 
+                
+                var subclassesHTML = '' 
 
                 for (e of subclasses) {
                     
-                    subclassesHTML += `<li>${e}</li>`
-                    
+                    subclassesHTML += `<li class="subFamilyButton" data="${i}">
+                            ${e}
+                        </li>
+                    `
                 }
+                    
+                
                     
                  
                 if (i <= length) {
@@ -202,22 +222,24 @@ const Main = {
                                 ${subclassesHTML}
     
                                 
-    
+
                             </ul>
                         </div>
                 
                     </div>
-    
+     
                     `
                 } else {
-                    console.log(`Entrou nas familias da direita`)
+                    //é possível retirar essa repetição de código
+                    //criando uma função que constroe esse HTML
                     Main.$right_families.innerHTML += `
                     <div class="box valvulas">
                         <span class="material-symbols-rounded">
                             ${family[i].icon}
                         </span>
-                        <h2 class="title_family
-                        ">${family[i].nome}</h2>   
+                        <h2 class="title_family">
+                            ${family[i].nome}
+                        </h2>   
                         <div class="expand _right">
                             <ul>
                                
@@ -235,9 +257,29 @@ const Main = {
                 subclassesHTML = ""
                 
             }
-
+            return document.querySelectorAll('.subFamilyButton')
             
-        }
+              
+        },
+
+        showImages: function(evento) {
+            
+            var img_subclasse = Main.$families
+            console.log(img_subclasse)
+
+            console.log(evento)
+            //cada grupo de foto terá que ter um id específico.
+            //e.g.: "valvula_combustivel"
+            //vou precisar iterar sobre uma lista de imagens, 
+            //uma variável vai receber essa lista quando o botão
+            //for clicado. O product_show vai receber a variável
+            //com as fotos
+
+
+/*             this.$product_show.innerHTML = `
+                <img src=${} alt='paças para carreta'>
+            `
+ */        }
 
     }
         

@@ -669,8 +669,6 @@
     margin: 0px 50px;
   }
   * body .about .container .timing {
-    background-image: url(../images/estreita_horario.jpg);
-    background-position: center;
     border-radius: 10px;
     padding: 10px;
     margin: 5px;
@@ -804,7 +802,6 @@
     justify-content: center;
     align-items: center;
     background-color: var(--perola);
-    color: white;
     cursor: pointer;
     transition-duration: 300ms;
   }
@@ -817,12 +814,14 @@
   * body .products .container div.left_families .box .material-symbols-rounded, * body .products .container div.right_families .box .material-symbols-rounded { /*icon*/
     color: var(--vermelho-principal-logo);
     margin-bottom: 0px;
+    font-size: 50px;
     font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
   }
   * body .products .container div.left_families .box h2.title_family, * body .products .container div.right_families .box h2.title_family {
     font-size: 15px;
     color: var(--azul-UCLA);
-    margin-bottom: 2.5px;
+    margin: 2.5px 0;
+    text-align: center;
   }
   * body .products .container div.left_families .box div.expand, * body .products .container div.right_families .box div.expand {
     display: none;

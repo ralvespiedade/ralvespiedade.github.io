@@ -214,9 +214,6 @@
                     
                     
                     .timing {
-                        
-                        background-image: url(../images/estreita_horario.jpg);
-                        background-position: center;
                         border-radius: 10px;
                         padding: 10px;
                         margin: 5px;
@@ -394,7 +391,6 @@
                             justify-content: center;
                             align-items: center;
                             background-color: var(--perola);
-                            color: white;
                             cursor: pointer;
                             transition-duration: 300ms;
                             
@@ -411,6 +407,7 @@
                             .material-symbols-rounded {/*icon*/
                                 color: var(--vermelho-principal-logo);
                                 margin-bottom: 0px;
+                                font-size: 50px;
                                 font-variation-settings:
                                     'FILL' 0,
                                     'wght' 400,
@@ -421,7 +418,8 @@
                             h2.title_family {
                                 font-size: 15px;
                                 color: var(--azul-UCLA);
-                                margin-bottom: 2.5px;
+                                margin: 2.5px 0;
+                                text-align: center;
                             }
                             
     
