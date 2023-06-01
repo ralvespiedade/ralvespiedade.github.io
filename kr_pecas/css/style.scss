@@ -369,7 +369,6 @@
                     background-color: var(--azul-UCLA);
                     height: 100vh;
                     display: flex;
-                    flex-wrap: wrap;
                     justify-content: space-between;
                     align-items: center;
                     border-radius: 10px;
@@ -483,6 +482,22 @@
                                 }
                                 
                             }
+                        }
+                    }
+
+                    div.product_show {
+                        background-color:rgb(33, 164, 10);
+                        width: 1000px;
+                        height: 500px;
+                        padding: 10px;
+                        flex-wrap: wrap-reverse;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        
+                        img {
+                            height: 250px;
+                            margin: 10px;
                         }
                     }
                 }

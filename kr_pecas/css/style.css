@@ -782,7 +782,6 @@
     background-color: var(--azul-UCLA);
     height: 100vh;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
@@ -866,6 +865,20 @@
   }
   * body .products .container div.left_families .box div.expand ul li div.wrap_img_detail_family, * body .products .container div.right_families .box div.expand ul li div.wrap_img_detail_family {
     opacity: 0;
+  }
+  * body .products .container div.product_show {
+    background-color: rgb(33, 164, 10);
+    width: 1000px;
+    height: 500px;
+    padding: 10px;
+    flex-wrap: wrap-reverse;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  * body .products .container div.product_show img {
+    height: 250px;
+    margin: 10px;
   }
   * body .appointment { /*Section contato*/
     background-color: rgb(9, 9, 111);
