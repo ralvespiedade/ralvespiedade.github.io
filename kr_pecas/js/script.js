@@ -34,7 +34,7 @@ const Main = {
 
         {
             name: 'Válvulas',
-            nickname: 'Vávulas', 
+            nickname: 'Válvulas', 
             class: 'box valvula',
             icon: 'valve', 
             subfamily: ['Combustível', 'Químico', 'Alimentício'],
@@ -71,7 +71,7 @@ const Main = {
         },
         {
             name: 'Engates e Conexões',
-            nickname: 'Engate_e_Conexões',
+            nickname: 'Engates_e_Conexões',
             class: 'box',
             icon: 'local_gas_station',
             subfamily: ['Alumínio', 'Aço inox', 'Polipropileno', 'Ferro fundido'],
@@ -83,24 +83,93 @@ const Main = {
                         'engates_e_conexões_aluminio3.jpeg',
                         'engates_e_conexões_aluminio4.jpeg',
                     ]
-                }
+                },
+                {
+                    Engates_e_Conexões_Aço_inox: [
+                        'engates_e_conexões_aço_inox1.jpeg',
+                        'engates_e_conexões_aço_inox2.jpeg',
+                        'engates_e_conexões_aço_inox3.jpeg',
+                        'engates_e_conexões_aço_inox4.jpeg',
+                    ]
+                },
+                {
+                    Engates_e_Conexões_Polipropileno: [
+                        'engates_e_conexões_polipropileno1.jpeg',
+                        'engates_e_conexões_polipropileno2.jpeg',
+                    ]
+                },
+                {
+                    Engates_e_Conexões_Ferro_fundido: [
+                        'engates_e_conexões_ferro_fundido1.jpeg',
+                        'engates_e_conexões_ferro_fundido2.jpeg',
+                    ]
+                },
+                        
+                
             ]
         },
         {
             name: 'Ponteiras e Mangotes',
+            nickname: 'Ponteiras_e_Mangotes',
             class: 'box',
             icon: 'flashlight_on',
-            subfamily: ['Alumínio', 'Aço inox', 'Polipropileno', 'Ferro fundido']
+            subfamily: ['Alumínio', 'Aço inox', 'Polipropileno', 'Ferro fundido', 'Mangotes'],
+            image: [
+                {
+                    
+                    Ponteiras_e_Mangotes_Alumínio: [
+                        'ponteiras_e_mangotes_aluminio1.jpeg',
+                        'ponteiras_e_mangotes_aluminio2.jpeg',
+                        'ponteiras_e_mangotes_aluminio3.jpeg',
+                        'ponteiras_e_mangotes_aluminio4.jpeg',
+                    ]
+                }, 
+                {
+                    Ponteiras_e_Mangotes_Aço_inox: [
+                        'ponteiras_e_mangotes_aço_inox1.jpeg',
+                        'ponteiras_e_mangotes_aço_inox2.jpeg',
+                        'ponteiras_e_mangotes_aço_inox3.jpeg',
+                        'ponteiras_e_mangotes_aço_inox4.jpeg',
+                    ]
+
+                },
+                {
+                    Ponteiras_e_Mangotes_Polipropileno: [
+                        'ponteiras_e_mangotes_polipropileno1.jpeg',
+                        'ponteiras_e_mangotes_polipropileno2.jpeg',
+                        'ponteiras_e_mangotes_polipropileno3.jpeg',
+                        'ponteiras_e_mangotes_polipropileno4.jpeg',
+                    ]
+                },
+                {
+                    Ponteiras_e_Mangotes_Ferro_fundido: [
+                        'ponteiras_e_mangotes_ferro_fundido1.jpeg',
+                        'ponteiras_e_mangotes_ferro_fundido2.jpeg',
+                        'ponteiras_e_mangotes_ferro_fundido3.jpeg',
+                        'ponteiras_e_mangotes_ferro_fundido4.jpeg',
+                    ]
+                },
+                {
+                    Ponteiras_e_Mangotes_Mangotes: [
+                        'ponteiras_e_mangotes_mangotes1.jpeg',
+                        'ponteiras_e_mangotes_mangotes2.jpeg',
+                        'ponteiras_e_mangotes_mangotes3.jpeg',
+                        'ponteiras_e_mangotes_mangotes4.jpeg',
+                    ]
+                },
+            ]
         },
         {
             name: 'Elétrica',
+            nickname: 'Elétrica',
             class: 'box eletrica',
             icon: 'flash_auto',
-            subfamily: ['Lanterna', 'Acessórios']
+            subfamily: ['Lanternas', 'Acessórios']
         },
              
         {
-            name: 'Pneumática', 
+            name: 'Pneumática',
+            nickname: 'Pneumática', 
             class: 'box pneumatica',
             icon: 'air',
             subfamily: ['Válvulas', 'Engates', 'Conectores']
@@ -156,8 +225,9 @@ const Main = {
                 var subclassesHTML = '' 
 
                 for (e of subclasses) {
+                    nickName = e.replace(' ', '_')
                     
-                    subclassesHTML += `<li class="subFamilyButton" dataset="${family[i].name}_${e}">
+                    subclassesHTML += `<li class="subFamilyButton" dataset="${family[i].nickname}_${nickName}">
                             ${e}
                         </li>
                     `
@@ -186,7 +256,7 @@ const Main = {
                     `
                 } else {
                     //é possível retirar essa repetição de código
-                    //criando uma função que constroe esse HTML
+                    //criando uma função que constroi esse HTML
                     document.querySelector('.right_families').innerHTML += `
                     <div class="box valvulas">
                         <span class="material-symbols-rounded">
@@ -303,9 +373,9 @@ const Main = {
         
 
         showImages: function(evento) {
-            
+            //limpando o mostruario de produtos
             this.$product_show.innerHTML = ``
-
+            //pegando o valor da subfamilia clicada. Ex.: Valvula_Aluminio
             var dataset_value = evento.target.attributes['dataset'].value
             
             console.log(dataset_value)
@@ -313,26 +383,29 @@ const Main = {
             for (g of Main.families) {
                 
                 for(h of g.image) {
-                    
+                    //h é o, por exemplo: valvula_aluminio, que contem a lista de endereços
                     var nomeProp = Object.getOwnPropertyNames(h)
+                    console.log(nomeProp)
                     nomeProp = nomeProp.toString()
                     
-                    if (dataset_value == Object.getOwnPropertyNames(h)) {
+                    console.log(nomeProp)    
+                    if (dataset_value == nomeProp) {
                         
                         for (j of h[`${nomeProp}`]) {
                             console.log(`
                             
-                            <img src="./images/${dataset_value.toLowerCase()}/${j}" alt="${dataset_value}">
+                                <img src="./images/${dataset_value.toLowerCase()}/${j}" alt="${dataset_value}">
                             
                             `)
+
                             this.$product_show.innerHTML += `
                             
-                            <img src="./images/${dataset_value.toLowerCase()}/${j}" alt="peças para carretas">
+                               <img src="./images/${dataset_value.toLowerCase()}/${j}" alt="peças para carretas">
                             
                             `
-
                         }
                     }
+
                     
                 }
                 
